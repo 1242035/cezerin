@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const applicationConfig = require('./config/admin.js');
 const applicationText = require(`./locales/${applicationConfig.language}.json`);
 
@@ -64,8 +64,8 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['env', 'react'],
-						plugins: ['transform-class-properties']
+						presets: ['@babel/preset-env', '@babel/preset-react'],
+						plugins: ['@babel/proposal-class-properties']
 					}
 				}
 			},
@@ -104,14 +104,7 @@ module.exports = {
 	},
 
 	plugins: [
-		new CleanWebpackPlugin(
-			[
-				'public/admin-assets/js/app-*.js',
-				'public/admin-assets/js/vendor-*.js',
-				'public/admin-assets/css/bundle-*.css'
-			],
-			{ verbose: false }
-		),
+		new CleanWebpackPlugin(),
 		new webpack.DefinePlugin({
 			APPLICATION_CONFIG: JSON.stringify(applicationConfig)
 		}),
