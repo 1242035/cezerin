@@ -4,10 +4,10 @@ import messages from 'lib/text';
 import style from './style.css';
 import DynamicEditControl from './dynamicEditControl';
 
-import Paper from 'material-ui/Paper';
-import FlatButton from 'material-ui/FlatButton';
-import FontIcon from 'material-ui/FontIcon';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
+import Paper from '@material-ui/core/Paper';
+import FlatButton from '@material-ui/core/FlatButton';
+import FontIcon from '@material-ui/core/FontIcon';
+import FloatingActionButton from '@material-ui/core/FloatingActionButton';
 
 const ArrayEditor = ({
 	label,

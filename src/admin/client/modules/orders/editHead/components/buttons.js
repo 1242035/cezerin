@@ -3,13 +3,13 @@ import messages from 'lib/text';
 import ConfirmationDialog from 'modules/shared/confirmation';
 import ProductSearchDialog from 'modules/shared/productSearch';
 import DeleteConfirmation from 'modules/shared/deleteConfirmation';
-import FontIcon from 'material-ui/FontIcon';
-import IconMenu from 'material-ui/IconMenu';
-import IconButton from 'material-ui/IconButton';
-import MenuItem from 'material-ui/MenuItem';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
-import Divider from 'material-ui/Divider';
+import FontIcon from '@material-ui/core/FontIcon';
+import IconMenu from '@material-ui/core/IconMenu';
+import IconButton from '@material-ui/core/IconButton';
+import MenuItem from '@material-ui/core/MenuItem';
+import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
 
 export default class Buttons extends React.Component {
 	constructor(props) {

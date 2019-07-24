@@ -5,7 +5,7 @@ import ServiceItem from './serviceItem';
 import AppItem from './appItem';
 import style from './style.css';
 import apps from 'src/apps';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 
 export default class ServicesList extends React.Component {
 	constructor(props) {
@@ -45,7 +45,7 @@ export default class ServicesList extends React.Component {
 						}}
 					>
 						{messages.loadFromWebstore}&nbsp;&nbsp;<Link to="/admin/apps/login">
-							<RaisedButton label={messages.loginTitle} />
+							<Button variant="contained" label={messages.loginTitle} />
 						</Link>
 					</div>
 				)}

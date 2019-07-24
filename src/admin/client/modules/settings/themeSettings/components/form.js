@@ -8,9 +8,9 @@ import style from './style.css';
 import DynamicEditControl from './dynamicEditControl';
 import ArrayEditor from './arrayEditor';
 
-import Paper from 'material-ui/Paper';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import Paper from '@material-ui/core/Paper';
+import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 
 class ThemeSettings extends React.Component {
 	constructor(props) {
@@ -78,7 +78,7 @@ class ThemeSettings extends React.Component {
 								onClick={reset}
 								disabled={pristine || submitting}
 							/>
-							<RaisedButton
+							<Button variant="contained"
 								type="submit"
 								label={messages.save}
 								primary={true}

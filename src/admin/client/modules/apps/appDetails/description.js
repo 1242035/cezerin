@@ -3,10 +3,10 @@ import React from 'react';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
-import Divider from 'material-ui/Divider';
-import FontIcon from 'material-ui/FontIcon';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import FontIcon from '@material-ui/core/Icon';
 
 const AppDescription = ({
 	name,
@@ -26,10 +26,10 @@ const AppDescription = ({
 						<h1 className={style.title}>{name}</h1>
 						<div className={style.developer}>{developer}</div>
 						{/* {!enabled &&
-              <RaisedButton label={messages.enable} primary={true} disabled={loadingEnableDisable} onClick={enableService} />
+              <Button variant="contained" label={messages.enable} primary={true} disabled={loadingEnableDisable} onClick={enableService} />
             }
             {enabled &&
-              <RaisedButton label={messages.disable} disabled={loadingEnableDisable} onClick={disableService} />
+              <Button variant="contained" label={messages.disable} disabled={loadingEnableDisable} onClick={disableService} />
             } */}
 					</div>
 				</div>

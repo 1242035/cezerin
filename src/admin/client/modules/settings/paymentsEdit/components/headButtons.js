@@ -1,11 +1,11 @@
 import React from 'react';
 import messages from 'lib/text';
 import DeleteConfirmation from 'modules/shared/deleteConfirmation';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import FontIcon from '@material-ui/core/FontIcon';
+import IconButton from '@material-ui/core/IconButton';
+import Dialog from '@material-ui/core/Dialog';
+import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 
 export default class Buttons extends React.Component {
 	constructor(props) {

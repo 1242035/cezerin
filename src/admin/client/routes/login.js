@@ -4,9 +4,9 @@ import CezerinClient from 'cezerin-client';
 import settings from 'lib/settings';
 import * as auth from 'lib/auth';
 
-import RaisedButton from 'material-ui/RaisedButton';
-import Paper from 'material-ui/Paper';
-import TextField from 'material-ui/TextField';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
 
 export default class LoginForm extends React.Component {
 	constructor(props) {
@@ -98,7 +98,7 @@ export default class LoginForm extends React.Component {
 								hintText={messages.email}
 							/>
 						</div>
-						<RaisedButton
+						<Button variant="contained"
 							label={messages.loginButton}
 							primary={true}
 							disabled={isFetching || emailIsSent}

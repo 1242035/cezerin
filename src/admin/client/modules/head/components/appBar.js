@@ -24,9 +24,9 @@ import AppsHead from 'modules/apps/head';
 import FileListHead from 'modules/files/list/head';
 import DrawerMenu from './drawer';
 
-import FontIcon from 'material-ui/FontIcon';
-import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
+import FontIcon from '@material-ui/core/FontIcon';
+import AppBar from '@material-ui/core/AppBar';
+import IconButton from '@material-ui/core/IconButton';
 
 export default class AppBarTop extends React.Component {
 	constructor(props) {

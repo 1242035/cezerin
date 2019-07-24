@@ -6,11 +6,11 @@ import * as helper from 'lib/helper';
 import style from './style.css';
 import ShippingAddressForm from './shippingAddressForm.js';
 
-import Paper from 'material-ui/Paper';
-import Divider from 'material-ui/Divider';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
-import Dialog from 'material-ui/Dialog';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
 
 const getShippingFieldLabel = ({ label, key }) => {
 	return label && label.length > 0
@@ -206,7 +206,7 @@ export default class OrderCustomer extends React.Component {
 						<ShippingAddress order={order} settings={settings} />
 
 						{allowEdit && (
-							<RaisedButton
+							<Button variant="contained"
 								label={messages.edit}
 								style={{ marginRight: 15 }}
 								onClick={this.showShippingEdit}

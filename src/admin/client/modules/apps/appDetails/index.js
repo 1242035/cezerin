@@ -1,7 +1,7 @@
 import React from 'react';
 import AppDescription from './description';
 import style from './style.css';
-import Paper from 'material-ui/Paper';
+import Paper from '@material-ui/core/Paper';
 import apps from 'src/apps';
 
 const AppDetails = ({ match }) => {

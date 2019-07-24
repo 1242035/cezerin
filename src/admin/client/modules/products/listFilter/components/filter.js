@@ -2,9 +2,9 @@ import React from 'react';
 import messages from 'lib/text';
 import style from './style.css';
 
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
-import Toggle from 'material-ui/Toggle';
+import SelectField from '@material-ui/core/SelectField';
+import MenuItem from '@material-ui/core/MenuItem';
+import Toggle from '@material-ui/core/Toggle';
 
 const Filter = ({
 	filter,

@@ -1,8 +1,8 @@
 import React from 'react';
 import messages from 'lib/text';
 import api from 'lib/api';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 export const Description = {
 	key: 'jivosite',
@@ -70,7 +70,7 @@ export class App extends React.Component {
 				/>
 
 				<div style={{ textAlign: 'right' }}>
-					<RaisedButton
+					<Button variant="contained"
 						label={messages.save}
 						primary={true}
 						disabled={false}

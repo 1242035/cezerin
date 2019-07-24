@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
 import style from './style.css';
-import { Card, CardMedia, CardTitle } from 'material-ui/Card';
-import FontIcon from 'material-ui/FontIcon';
+import { Card, CardMedia, CardTitle } from '@material-ui/core/Card';
+import FontIcon from '@material-ui/core/FontIcon';
 
 const styles = {
 	card: {

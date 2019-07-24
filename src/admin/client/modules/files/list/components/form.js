@@ -7,11 +7,11 @@ import DeleteConfirmation from 'modules/shared/deleteConfirmation';
 import style from './style.css';
 import FileUploader from './fileUploader';
 
-import Paper from 'material-ui/Paper';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
-import IconMenu from 'material-ui/IconMenu';
-import MenuItem from 'material-ui/MenuItem';
+import Paper from '@material-ui/core/Paper';
+import FontIcon from '@material-ui/core/FontIcon';
+import IconButton from '@material-ui/core/IconButton';
+import IconMenu from '@material-ui/core/IconMenu';
+import MenuItem from '@material-ui/core/MenuItem';
 const Fragment = React.Fragment;
 
 const iconButtonElement = (

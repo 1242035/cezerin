@@ -6,9 +6,9 @@ import messages from 'lib/text';
 import style from './style.css';
 import { CustomToggle, MultiSelect } from 'modules/shared/form';
 
-import Paper from 'material-ui/Paper';
-import Divider from 'material-ui/Divider';
-import RaisedButton from 'material-ui/RaisedButton';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
 
 const WEBHOOK_EVENTS = [
 	'order.created',
@@ -102,7 +102,7 @@ class EditWebhookForm extends React.Component {
 									: 'buttons-box-show')
 							}
 						>
-							<RaisedButton
+							<Button variant="contained"
 								type="submit"
 								label={isAdd ? messages.add : messages.save}
 								primary={true}

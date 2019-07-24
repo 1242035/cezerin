@@ -7,12 +7,12 @@ import { CustomToggle } from 'modules/shared/form';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
-import FontIcon from 'material-ui/FontIcon';
-import IconMenu from 'material-ui/IconMenu';
-import IconButton from 'material-ui/IconButton';
-import MenuItem from 'material-ui/MenuItem';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import FontIcon from '@material-ui/core/FontIcon';
+import IconMenu from '@material-ui/core/IconMenu';
+import IconButton from '@material-ui/core/IconButton';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const FieldsEditor = ({ fields, meta: { touched, error, submitFailed } }) => {
 	return (
@@ -97,7 +97,7 @@ const FieldsEditor = ({ fields, meta: { touched, error, submitFailed } }) => {
 			})}
 
 			<div style={{ margin: '20px 0px' }}>
-				<RaisedButton label={messages.add} onClick={() => fields.push({})} />
+				<Button variant="contained" label={messages.add} onClick={() => fields.push({})} />
 			</div>
 		</div>
 	);

@@ -1,6 +1,6 @@
 import React from 'react';
 import messages from 'lib/text';
-import TextField from 'material-ui/TextField';
+import TextField from '@material-ui/core/TextField';
 
 export default ({ value, setSearch }) => {
 	return (

@@ -13,13 +13,13 @@ import ProductSearchDialog from 'modules/shared/productSearch';
 import ProductCategorySelect from './productCategorySelect';
 import ProductCategoryMultiSelect from './productCategoryMultiSelect';
 
-import Paper from 'material-ui/Paper';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
-import IconMenu from 'material-ui/IconMenu';
-import MenuItem from 'material-ui/MenuItem';
+import Paper from '@material-ui/core/Paper';
+import FontIcon from '@material-ui/core/FontIcon';
+import IconButton from '@material-ui/core/IconButton';
+import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
+import IconMenu from '@material-ui/core/IconMenu';
+import MenuItem from '@material-ui/core/MenuItem';
 const Fragment = React.Fragment;
 
 const TagsField = ({ input, placeholder }) => {
@@ -221,7 +221,7 @@ class ProductsArray extends React.Component {
 				</Paper>
 
 				<div>
-					<RaisedButton
+					<Button variant="contained"
 						label={messages.addOrderItem}
 						onClick={this.showAddItem}
 					/>
@@ -332,7 +332,7 @@ const ProductAdditionalForm = ({
 						onClick={reset}
 						disabled={pristine || submitting}
 					/>
-					<RaisedButton
+					<Button variant="contained"
 						type="submit"
 						label={messages.save}
 						primary={true}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Divider from 'material-ui/Divider';
-import FontIcon from 'material-ui/FontIcon';
+import Divider from '@material-ui/core/Divider';
+import FontIcon from '@material-ui/core/FontIcon';
 import messages from 'lib/text';
 import * as helper from 'lib/helper';
 import style from './style.css';

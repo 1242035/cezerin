@@ -3,10 +3,10 @@ import { Field, FieldArray, reduxForm } from 'redux-form';
 import messages from 'lib/text';
 import style from './style.css';
 import CategoryMultiselect from 'modules/productCategories/components/multiselectList';
-import FontIcon from 'material-ui/FontIcon';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import FontIcon from '@material-ui/core/FontIcon';
+import Dialog from '@material-ui/core/Dialog';
+import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 const Fragment = React.Fragment;
 
 const CategoryItemActions = ({ fields, index }) => (

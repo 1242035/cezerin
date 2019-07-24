@@ -9,7 +9,7 @@ import style from './style.css';
 import ArrayEditor from './arrayEditor';
 import ImageEditor from './imageEditor';
 
-import MenuItem from 'material-ui/MenuItem';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const DynamicEditControl = ({
 	type,

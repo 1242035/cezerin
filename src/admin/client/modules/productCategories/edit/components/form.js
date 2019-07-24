@@ -10,9 +10,9 @@ import style from './style.css';
 import settings from 'lib/settings';
 import api from 'lib/api';
 
-import Paper from 'material-ui/Paper';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import Paper from '@material-ui/core/Paper';
+import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 
 const validate = values => {
 	const errors = {};
@@ -134,7 +134,7 @@ const ProductCategoryEditForm = ({
 							onClick={reset}
 							disabled={pristine || submitting}
 						/>
-						<RaisedButton
+						<Button variant="contained"
 							type="submit"
 							label={messages.save}
 							primary={true}

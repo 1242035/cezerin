@@ -5,10 +5,10 @@ import { TextField, RadioButtonGroup } from 'redux-form-material-ui';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import Divider from 'material-ui/Divider';
-import RaisedButton from 'material-ui/RaisedButton';
-import { RadioButton } from 'material-ui/RadioButton';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
+import { RadioButton } from '@material-ui/core/RadioButton';
 
 const radioButtonStyle = {
 	marginTop: 14,
@@ -75,7 +75,7 @@ class CheckoutFieldForm extends React.Component {
 						</div>
 					</div>
 					<div className="buttons-box">
-						<RaisedButton
+						<Button variant="contained"
 							type="submit"
 							label={messages.save}
 							primary={true}

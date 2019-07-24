@@ -31,9 +31,9 @@ import {
 	white,
 	darkBlack,
 	fullBlack
-} from 'material-ui/styles/colors';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+} from '@material-ui/core/styles/colors';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import getMuiTheme from '@material-ui/core/styles/getMuiTheme';
 
 const muiTheme = getMuiTheme({
 	fontFamily: 'Roboto, sans-serif',

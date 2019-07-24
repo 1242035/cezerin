@@ -8,13 +8,13 @@ import messages from 'lib/text';
 import style from './style.css';
 import data from 'lib/data';
 
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
-import Divider from 'material-ui/Divider';
-import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
-import FontIcon from 'material-ui/FontIcon';
-import { List, ListItem } from 'material-ui/List';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import DropDownMenu from '@material-ui/core/DropDownMenu';
+import MenuItem from '@material-ui/core/MenuItem';
+import FontIcon from '@material-ui/core/FontIcon';
+import { List, ListItem } from '@material-ui/core/List';
 
 class GeneralSettings extends React.Component {
 	constructor(props) {
@@ -495,7 +495,7 @@ class GeneralSettings extends React.Component {
 						</div>
 					</div>
 					<div className="buttons-box">
-						<RaisedButton
+						<Button variant="contained"
 							type="submit"
 							label={messages.save}
 							primary={true}

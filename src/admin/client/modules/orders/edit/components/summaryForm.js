@@ -7,10 +7,10 @@ import api from 'lib/api';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Divider from 'material-ui/Divider';
-import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
-import MenuItem from 'material-ui/MenuItem';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
+import FlatButton from '@material-ui/core/FlatButton';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const validate = values => {
 	const errors = {};

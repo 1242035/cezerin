@@ -5,8 +5,8 @@ import { TextField, SelectField } from 'redux-form-material-ui';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 
 class EmailTemplate extends React.Component {
 	constructor(props) {
@@ -49,7 +49,7 @@ class EmailTemplate extends React.Component {
 						</div>
 					</div>
 					<div className="buttons-box">
-						<RaisedButton
+						<Button variant="contained"
 							type="submit"
 							label={messages.save}
 							primary={true}

@@ -3,8 +3,8 @@ import Dropzone from 'react-dropzone';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Snackbar from 'material-ui/Snackbar';
-import RaisedButton from 'material-ui/RaisedButton';
+import Snackbar from '@material-ui/core/Snackbar';
+import Button from '@material-ui/core/Button';
 
 export default class MultiUploader extends React.Component {
 	onDrop = files => {
@@ -40,7 +40,7 @@ export default class MultiUploader extends React.Component {
 				</Dropzone>
 
 				{!uploading && (
-					<RaisedButton
+					<Button variant="contained"
 						primary={true}
 						label={messages.chooseImage}
 						style={{ marginLeft: 20, marginTop: 10 }}

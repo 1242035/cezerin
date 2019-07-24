@@ -5,9 +5,9 @@ import { TextField } from 'redux-form-material-ui';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import Paper from '@material-ui/core/Paper';
+import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 
 const validate = values => {
 	const errors = {};
@@ -68,7 +68,7 @@ class Form extends React.Component {
 							className={style.button}
 							onClick={this.props.onCancel}
 						/>
-						<RaisedButton
+						<Button variant="contained"
 							type="submit"
 							label={statusId ? messages.save : messages.add}
 							primary={true}

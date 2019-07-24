@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
-import { List, ListItem } from 'material-ui/List';
-import FontIcon from 'material-ui/FontIcon';
+import { List, ListItem } from '@material-ui/core/List';
+import FontIcon from '@material-ui/core/FontIcon';
 
 const styles = {
 	selectedItem: {

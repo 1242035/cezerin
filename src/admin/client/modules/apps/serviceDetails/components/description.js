@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
-import Divider from 'material-ui/Divider';
-import FontIcon from 'material-ui/FontIcon';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import FontIcon from '@material-ui/core/FontIcon';
 
 const ServiceDescription = ({
 	service,
@@ -32,7 +32,7 @@ const ServiceDescription = ({
 								<h1 className={style.title}>{service.name}</h1>
 								<div className={style.developer}>{service.developer.name}</div>
 								{!service.enabled && (
-									<RaisedButton
+									<Button variant="contained"
 										label={messages.enable}
 										primary={true}
 										disabled={loadingEnableDisable}
@@ -40,7 +40,7 @@ const ServiceDescription = ({
 									/>
 								)}
 								{service.enabled && (
-									<RaisedButton
+									<Button variant="contained"
 										label={messages.disable}
 										disabled={loadingEnableDisable}
 										onClick={disableService}

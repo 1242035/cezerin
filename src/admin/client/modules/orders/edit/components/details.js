@@ -8,7 +8,7 @@ import OrderSummary from './summary';
 import OrderItems from './items';
 import OrderCustomer from './customer';
 
-import Paper from 'material-ui/Paper';
+import Paper from '@material-ui/core/Paper';
 
 export default class OrderDetails extends React.Component {
 	constructor(props) {

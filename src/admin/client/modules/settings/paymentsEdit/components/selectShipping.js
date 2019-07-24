@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { List, ListItem } from 'material-ui/List';
-import Checkbox from 'material-ui/Checkbox';
+import { List, ListItem } from '@material-ui/core/List';
+import Checkbox from '@material-ui/core/Checkbox';
 
 export default class SelectShippingMethodsField extends React.Component {
 	constructor(props) {

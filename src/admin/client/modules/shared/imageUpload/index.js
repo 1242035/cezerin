@@ -2,10 +2,10 @@ import React from 'react';
 import messages from 'lib/text';
 import Dropzone from 'react-dropzone';
 
-import Paper from 'material-ui/Paper';
-import Snackbar from 'material-ui/Snackbar';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
+import Paper from '@material-ui/core/Paper';
+import Snackbar from '@material-ui/core/Snackbar';
+import FontIcon from '@material-ui/core/FontIcon';
+import IconButton from '@material-ui/core/IconButton';
 
 import style from './style.css';
 

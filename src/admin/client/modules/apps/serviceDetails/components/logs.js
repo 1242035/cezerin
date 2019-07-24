@@ -5,7 +5,7 @@ import moment from 'moment';
 import messages from 'lib/text';
 import api from 'lib/api';
 import style from './style.css';
-import Paper from 'material-ui/Paper';
+import Paper from '@material-ui/core/Paper';
 
 const ServiceLogs = ({ logs }) => {
 	const list = logs.map((action, index) => {

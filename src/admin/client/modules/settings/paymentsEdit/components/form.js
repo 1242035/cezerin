@@ -9,12 +9,12 @@ import SelectShippingMethodsField from './selectShipping.js';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import Divider from 'material-ui/Divider';
-import RaisedButton from 'material-ui/RaisedButton';
-import MenuItem from 'material-ui/MenuItem';
-import { List, ListItem } from 'material-ui/List';
-import Checkbox from 'material-ui/Checkbox';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import { List, ListItem } from '@material-ui/core/List';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const validate = values => {
 	const errors = {};
@@ -192,7 +192,7 @@ class EditPaymentMethodForm extends React.Component {
 						</div>
 					</div>
 					<div className="buttons-box">
-						<RaisedButton
+						<Button variant="contained"
 							type="submit"
 							label={isAdd ? messages.add : messages.save}
 							primary={true}

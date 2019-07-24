@@ -5,11 +5,11 @@ import { TextField, SelectField } from 'redux-form-material-ui';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
-import Divider from 'material-ui/Divider';
-import FontIcon from 'material-ui/FontIcon';
-import { List, ListItem } from 'material-ui/List';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import FontIcon from '@material-ui/core/FontIcon';
+import { List, ListItem } from '@material-ui/core/List';
 
 class EmailSettings extends React.Component {
 	constructor(props) {
@@ -88,7 +88,7 @@ class EmailSettings extends React.Component {
 						</div>
 					</div>
 					<div className="buttons-box">
-						<RaisedButton
+						<Button variant="contained"
 							type="submit"
 							label={messages.save}
 							primary={true}

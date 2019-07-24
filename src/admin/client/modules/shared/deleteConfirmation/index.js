@@ -1,7 +1,7 @@
 import React from 'react';
 import messages from 'lib/text';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
+import Dialog from '@material-ui/core/Dialog';
+import FlatButton from '@material-ui/core/FlatButton';
 
 export default class ConfirmationDialog extends React.Component {
 	constructor(props) {

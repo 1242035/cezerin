@@ -7,9 +7,9 @@ import { AVAILABLE_PAYMENT_GATEWAYS } from '../availablePaymentGateways';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import Dialog from '@material-ui/core/Dialog';
+import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 
 class EditPaymentGatewayForm extends React.Component {
 	constructor(props) {
@@ -46,7 +46,7 @@ class EditPaymentGatewayForm extends React.Component {
 		if (this.props.gateway && this.props.gateway.length > 0) {
 			return (
 				<div>
-					<RaisedButton
+					<Button variant="contained"
 						onClick={this.handleOpen}
 						label={messages.drawer_settings}
 						style={{ margin: '15px 0 30px 0' }}

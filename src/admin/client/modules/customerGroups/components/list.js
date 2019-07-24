@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
-import { List, ListItem } from 'material-ui/List';
-import FontIcon from 'material-ui/FontIcon';
+import { List, ListItem } from '@material-ui/core/List';
+import Icon from '@material-ui/core/core/FontIcon';
 
 const styles = {
 	selectedItem: {
@@ -13,7 +13,7 @@ const styles = {
 	}
 };
 
-const FolderIcon = <FontIcon className="material-icons">folder</FontIcon>;
+const FolderIcon = <Icon className="material-icons">folder</Icon>;
 
 export default class Groups extends React.Component {
 	constructor(props) {

@@ -1,10 +1,10 @@
 import React from 'react';
 import messages from 'lib/text';
 import Gallery from 'modules/shared/imageUploadMultiple';
-import Paper from 'material-ui/Paper';
-import TextField from 'material-ui/TextField';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
+import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import FlatButton from '@material-ui/core/FlatButton';
 
 export default class ProductImages extends React.Component {
 	constructor(props) {

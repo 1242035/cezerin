@@ -7,9 +7,9 @@ import style from './style.css';
 import ConfirmationDialog from 'modules/shared/confirmation';
 import { MultiSelect } from 'modules/shared/form';
 
-import Paper from 'material-ui/Paper';
-import Divider from 'material-ui/Divider';
-import RaisedButton from 'material-ui/RaisedButton';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
 
 const Scopes = [
 	'admin',
@@ -120,14 +120,14 @@ class EditTokenForm extends React.Component {
 						</div>
 						<div className="buttons-box">
 							{!isAdd && (
-								<RaisedButton
+								<Button variant="contained"
 									label={messages.settings_revokeAccess}
 									secondary={true}
 									style={{ float: 'left' }}
 									onClick={this.handleRevoke}
 								/>
 							)}
-							<RaisedButton
+							<Button variant="contained"
 								type="submit"
 								label={isAdd ? messages.settings_generateToken : messages.save}
 								primary={true}

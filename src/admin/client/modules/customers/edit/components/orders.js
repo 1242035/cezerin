@@ -7,10 +7,10 @@ import messages from 'lib/text';
 import * as helper from 'lib/helper';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import Divider from 'material-ui/Divider';
-import FontIcon from 'material-ui/FontIcon';
-import { List, ListItem } from 'material-ui/List';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import Icon from '@material-ui/core/core/FontIcon';
+import { List, ListItem } from '@material-ui/core/List';
 
 const getOrderStates = order => {
 	let states = [];
@@ -78,7 +78,7 @@ const CustomerOrder = ({ order, settings }) => {
 			<Link to={`/admin/order/${order.id}`} style={{ textDecoration: 'none' }}>
 				<ListItem
 					rightIcon={
-						<FontIcon className="material-icons">keyboard_arrow_right</FontIcon>
+						<Icon className="material-icons">keyboard_arrow_right</Icon>
 					}
 					primaryText={
 						<div className="row">

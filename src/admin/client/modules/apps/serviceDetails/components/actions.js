@@ -5,10 +5,10 @@ import messages from 'lib/text';
 import api from 'lib/api';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
-import Divider from 'material-ui/Divider';
-import FontIcon from 'material-ui/FontIcon';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import FontIcon from '@material-ui/core/FontIcon';
 
 class ActionComponent extends React.Component {
 	constructor(props) {
@@ -44,7 +44,7 @@ class ActionComponent extends React.Component {
 						{action.description}
 					</div>
 					<div className="col-xs-5" style={{ textAlign: 'right' }}>
-						<RaisedButton
+						<Button variant="contained"
 							label={action.name}
 							primary={true}
 							disabled={this.state.loading}

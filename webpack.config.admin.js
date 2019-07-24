@@ -19,7 +19,7 @@ module.exports = {
 			'redux',
 			'redux-form',
 			'redux-form-material-ui',
-			'material-ui'
+			'@material-ui/core'
 		]
 	},
 
@@ -65,7 +65,7 @@ module.exports = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['@babel/preset-env', '@babel/preset-react'],
-						plugins: ['@babel/proposal-class-properties']
+						plugins: ['@babel/plugin-proposal-object-rest-spread']
 					}
 				}
 			},

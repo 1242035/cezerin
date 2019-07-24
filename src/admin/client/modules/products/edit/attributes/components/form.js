@@ -5,11 +5,11 @@ import { Field, FieldArray, reduxForm } from 'redux-form';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import Paper from '@material-ui/core/Paper';
+import FontIcon from '@material-ui/core/FontIcon';
+import IconButton from '@material-ui/core/IconButton';
+import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 
 const AttributesGrid = ({ fields, meta: { touched, error, submitFailed } }) => {
 	return (
@@ -70,7 +70,7 @@ const AttributesGrid = ({ fields, meta: { touched, error, submitFailed } }) => {
 			})}
 
 			<div style={{ margin: 30 }}>
-				<RaisedButton
+				<Button variant="contained"
 					label={messages.addAttribute}
 					onClick={() => fields.push({})}
 				/>
@@ -102,7 +102,7 @@ const ProductAttributesForm = ({
 						onClick={reset}
 						disabled={pristine || submitting}
 					/>
-					<RaisedButton
+					<Button variant="contained"
 						type="submit"
 						label={messages.save}
 						primary={true}

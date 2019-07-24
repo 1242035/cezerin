@@ -7,9 +7,9 @@ import * as helper from 'lib/helper';
 import style from './style.css';
 import SummaryForm from './summaryForm.js';
 
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
-import Dialog from 'material-ui/Dialog';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
 
 const getOrderStates = order => {
 	let states = [];
@@ -182,14 +182,14 @@ export default class OrderSummary extends React.Component {
 
 					<div style={{ marginTop: 20 }}>
 						{allowEdit && (
-							<RaisedButton
+							<Button variant="contained"
 								label="Edit"
 								style={{ marginRight: 15 }}
 								onClick={this.showSummaryEdit}
 							/>
 						)}
 						{isDraft && (
-							<RaisedButton
+							<Button variant="contained"
 								label={messages.placeOrder}
 								primary={true}
 								onClick={onCheckout}

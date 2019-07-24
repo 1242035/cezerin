@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import messages from 'lib/text';
 import style from './style.css';
 
-import Paper from 'material-ui/Paper';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
-import RaisedButton from 'material-ui/RaisedButton';
-import MenuItem from 'material-ui/MenuItem';
-import DropDownMenu from 'material-ui/DropDownMenu';
+import Paper from '@material-ui/core/Paper';
+import FontIcon from '@material-ui/core/FontIcon';
+import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import DropDownMenu from '@material-ui/core/DropDownMenu';
 
 class VariantInput extends React.Component {
 	constructor(props) {
@@ -202,13 +202,13 @@ const ProductVariantsGrid = ({
 				{variantRows}
 			</div>
 			<div className={style.innerBox}>
-				<RaisedButton
+				<Button variant="contained"
 					label={messages.addVariant}
 					onClick={createVariant}
 					style={{ marginRight: 20 }}
 					disabled={!hasOptions}
 				/>
-				<RaisedButton label={messages.addOption} onClick={createOption} />
+				<Button variant="contained" label={messages.addOption} onClick={createOption} />
 			</div>
 		</Paper>
 	);

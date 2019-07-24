@@ -5,9 +5,9 @@ import style from './style.css';
 import api from 'lib/api';
 import ThemeSettings from 'modules/settings/themeSettings';
 
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
-import Divider from 'material-ui/Divider';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
 
 const styles = {
 	button: {
@@ -63,7 +63,7 @@ export default class Theme extends React.Component {
 								{messages.settings_themeExportDesciption}
 							</div>
 							<div className="col-xs-4" style={{ textAlign: 'right' }}>
-								<RaisedButton
+								<Button variant="contained"
 									label={
 										exportInProcess
 											? messages.settings_themeExporting
@@ -90,7 +90,7 @@ export default class Theme extends React.Component {
 								{messages.settings_themeInstallDesciption}
 							</div>
 							<div className="col-xs-4" style={{ textAlign: 'right' }}>
-								<RaisedButton
+								<Button variant="contained"
 									label={
 										installInProcess
 											? messages.settings_themeInstalling
@@ -107,7 +107,7 @@ export default class Theme extends React.Component {
 										disabled={installInProcess}
 										style={styles.exampleImageInput}
 									/>
-								</RaisedButton>
+								</Button>
 							</div>
 						</div>
 					</div>

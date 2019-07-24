@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
-import Paper from 'material-ui/Paper';
-import Divider from 'material-ui/Divider';
-import FontIcon from 'material-ui/FontIcon';
-import { List, ListItem } from 'material-ui/List';
+import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
+import FontIcon from '@material-ui/core/FontIcon';
+import { List, ListItem } from '@material-ui/core/List';
 
 const TokenItem = ({ token }) => {
 	return (
