@@ -1,12 +1,11 @@
 import React from 'react';
 import messages from 'lib/text';
 import DeleteConfirmation from 'modules/shared/deleteConfirmation';
-import FontIcon from '@material-ui/core/FontIcon';
-import IconMenu from '@material-ui/core/IconMenu';
+import Icon from '@material-ui/core/Icon';
+import Menu from '@material-ui/core/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import Dialog from '@material-ui/core/Dialog';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 const Fragment = React.Fragment;
 
@@ -48,9 +47,9 @@ export default class Buttons extends React.Component {
 							tooltipPosition="bottom-left"
 							onClick={this.showDelete}
 						>
-							<FontIcon color="#fff" className="material-icons">
+							<Icon color="#fff" className="material-icons">
 								delete
-							</FontIcon>
+							</Icon>
 						</IconButton>
 						<DeleteConfirmation
 							open={this.state.openDelete}
@@ -68,9 +67,9 @@ export default class Buttons extends React.Component {
 					tooltip={messages.addOrderStatus}
 					onClick={onCreate}
 				>
-					<FontIcon color="#fff" className="material-icons">
+					<Icon color="#fff" className="material-icons">
 						add
-					</FontIcon>
+					</Icon>
 				</IconButton>
 			</span>
 		);

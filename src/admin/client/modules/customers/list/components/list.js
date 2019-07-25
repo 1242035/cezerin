@@ -1,10 +1,10 @@
 import React from 'react';
-import { List } from '@material-ui/core/List';
+import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import Head from './head';
 import CustomersListItem from './item';
 import Button from '@material-ui/core/Button';
-import Icon from '@material-ui/core/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import messages from 'lib/text';
 import style from './style.css';
 
@@ -45,7 +45,8 @@ export default class CustomersList extends React.Component {
 					<Divider />
 					{rows}
 					<div className={style.more}>
-						<Button variant="contained"
+						<Button
+							variant="contained"
 							disabled={loadingItems || !hasMore}
 							label={messages.actions_loadMore}
 							labelPosition="before"

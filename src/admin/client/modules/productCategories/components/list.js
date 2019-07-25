@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
-import { List, ListItem } from '@material-ui/core/List';
-import FontIcon from '@material-ui/core/FontIcon';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Icon from '@material-ui/core/Icon';
 
 const styles = {
 	selectedItem: {
@@ -16,10 +17,8 @@ const styles = {
 	}
 };
 
-const FolderIcon = <FontIcon className="material-icons">folder</FontIcon>;
-const DraftIcon = (
-	<FontIcon className="material-icons">visibility_off</FontIcon>
-);
+const FolderIcon = <Icon className="material-icons">folder</Icon>;
+const DraftIcon = <Icon className="material-icons">visibility_off</Icon>;
 
 class Item extends React.PureComponent {
 	constructor(props) {
@@ -116,7 +115,7 @@ export default class Categories extends React.Component {
 						primaryText={rootName}
 						style={'root' === selectedId ? styles.selectedItem : null}
 						innerDivStyle={styles.innerItem}
-						leftIcon={<FontIcon className="material-icons">home</FontIcon>}
+						leftIcon={<Icon className="material-icons">home</Icon>}
 						onClick={this.handleClickRoot}
 					/>
 				)}
@@ -127,7 +126,7 @@ export default class Categories extends React.Component {
 						primaryText={allName}
 						style={'all' === selectedId ? styles.selectedItem : null}
 						innerDivStyle={styles.innerItem}
-						leftIcon={<FontIcon className="material-icons">folder</FontIcon>}
+						leftIcon={<Icon className="material-icons">folder</Icon>}
 						onClick={this.handleClickAll}
 					/>
 				)}
@@ -143,9 +142,7 @@ export default class Categories extends React.Component {
 							className="treeItem"
 							primaryText={messages.productCategories_titleEditMany}
 							innerDivStyle={styles.innerItem}
-							leftIcon={
-								<FontIcon className="material-icons">settings</FontIcon>
-							}
+							leftIcon={<Icon className="material-icons">settings</Icon>}
 						/>
 					</Link>
 				)}

@@ -10,8 +10,9 @@ import style from './style.css';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import FontIcon from '@material-ui/core/Icon';
-import { List, ListItem } from '@material-ui/core/List';
+import Icon from '@material-ui/core/Icon';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 const DeveloperForm = ({
 	handleSubmit,
@@ -72,7 +73,8 @@ const DeveloperForm = ({
 						className="buttons-box"
 						style={{ display: pristine ? 'none' : 'block' }}
 					>
-						<Button variant="contained"
+						<Button
+							variant="contained"
 							type="submit"
 							label={messages.save}
 							primary={true}

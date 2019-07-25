@@ -9,7 +9,6 @@ import messages from 'lib/text';
 import style from './style.css';
 
 import Paper from '@material-ui/core/Paper';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 
@@ -94,18 +93,20 @@ class ProductOptionForm extends React.Component {
 							</div>
 						</div>
 						<div className="buttons-box">
-							<Button variant="contained"
+							<Button
+								variant="contained"
 								label={messages.actions_delete}
 								secondary={true}
 								onClick={deleteOption}
 							/>
-							<FlatButton
+							<Button
 								label={messages.cancel}
 								style={{ marginLeft: 12 }}
 								onClick={reset}
 								disabled={pristine || submitting}
 							/>
-							<Button variant="contained"
+							<Button
+								variant="contained"
 								type="submit"
 								label={messages.save}
 								primary={true}

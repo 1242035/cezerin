@@ -8,7 +8,6 @@ import ShippingAddressForm from './shippingAddressForm.js';
 
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 
@@ -161,9 +160,7 @@ export default class OrderCustomer extends React.Component {
 		const { order, settings } = this.props;
 
 		const allowEdit = order.closed === false && order.cancelled === false;
-		let mapAddress = `${order.shipping_address.address1} ${
-			order.shipping_address.city
-		} ${order.shipping_address.state} ${order.shipping_address.postal_code}`;
+		let mapAddress = `${order.shipping_address.address1} ${order.shipping_address.city} ${order.shipping_address.state} ${order.shipping_address.postal_code}`;
 		mapAddress = mapAddress.replace(/ /g, '+');
 		const mapUrl = `https://www.google.com/maps/place/${mapAddress}`;
 
@@ -206,14 +203,15 @@ export default class OrderCustomer extends React.Component {
 						<ShippingAddress order={order} settings={settings} />
 
 						{allowEdit && (
-							<Button variant="contained"
+							<Button
+								variant="contained"
 								label={messages.edit}
 								style={{ marginRight: 15 }}
 								onClick={this.showShippingEdit}
 							/>
 						)}
 						<a href={mapUrl} target="_blank">
-							<FlatButton label="View map" />
+							<Button label="View map" />
 						</a>
 
 						<BillingAddress

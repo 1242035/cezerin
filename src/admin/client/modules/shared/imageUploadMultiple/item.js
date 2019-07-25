@@ -3,7 +3,7 @@ import messages from 'lib/text';
 import style from './style.css';
 
 import Paper from '@material-ui/core/Paper';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 
 const GalleryItem = ({ url, alt, id, onDelete, onImageEdit }) => (
@@ -18,9 +18,9 @@ const GalleryItem = ({ url, alt, id, onDelete, onImageEdit }) => (
 				tooltipPosition="top-right"
 				onClick={onImageEdit}
 			>
-				<FontIcon color="rgba(0,0,0,0.5)" className="material-icons">
+				<Icon color="rgba(0,0,0,0.5)" className="material-icons">
 					create
-				</FontIcon>
+				</Icon>
 			</IconButton>
 			<IconButton
 				touch={true}
@@ -30,9 +30,9 @@ const GalleryItem = ({ url, alt, id, onDelete, onImageEdit }) => (
 					onDelete(id);
 				}}
 			>
-				<FontIcon color="rgba(0,0,0,0.5)" className="material-icons">
+				<Icon color="rgba(0,0,0,0.5)" className="material-icons">
 					delete
-				</FontIcon>
+				</Icon>
 			</IconButton>
 		</div>
 	</Paper>

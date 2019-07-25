@@ -6,7 +6,7 @@ import style from './style.css';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import FontIcon from '@material-ui/core/Icon';
+import Icon from '@material-ui/core/Icon';
 
 const AppDescription = ({
 	name,

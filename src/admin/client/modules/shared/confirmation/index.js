@@ -1,6 +1,6 @@
 import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
-import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 
 export default class ConfirmationDialog extends React.Component {
 	constructor(props) {
@@ -42,12 +42,12 @@ export default class ConfirmationDialog extends React.Component {
 		} = this.props;
 
 		const actions = [
-			<FlatButton
+			<Button
 				label={cancelLabel}
 				onClick={this.handleCancel}
 				style={{ marginRight: 10 }}
 			/>,
-			<FlatButton
+			<Button
 				label={submitLabel}
 				primary={true}
 				keyboardFocused={true}

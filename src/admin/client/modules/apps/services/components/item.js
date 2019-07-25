@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
 import style from './style.css';
-import { Card, CardMedia, CardTitle } from '@material-ui/core/Card';
-import FontIcon from '@material-ui/core/FontIcon';
+import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardHeader from '@material-ui/core/CardHeader';
+import Icon from '@material-ui/core/Icon';
 
 const styles = {
 	card: {
@@ -48,18 +50,18 @@ const Item = ({ path, coverUrl, title, developer, enabled }) => {
 					className={style.servicesCover}
 					style={{ backgroundImage: `url(${coverUrl})` }}
 				/>
-				<CardTitle
+				<CardHeader
 					title={title}
 					subtitle={
 						<div>
 							{developer}
 							{enabled && (
-								<FontIcon
+								<Icon
 									style={{ color: '#FF9900', float: 'right' }}
 									className="material-icons"
 								>
 									check_circle
-								</FontIcon>
+								</Icon>
 							)}
 						</div>
 					}

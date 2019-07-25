@@ -1,8 +1,9 @@
 import React from 'react';
-import Toggle from '@material-ui/core/Toggle';
+import Switch from '@material-ui/core/Switch';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
-import { List, ListItem } from '@material-ui/core/List';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 export const CustomToggle = ({
 	input,
@@ -12,10 +13,10 @@ export const CustomToggle = ({
 	style
 }) => {
 	return (
-		<Toggle
+		<Switch
 			label={label}
 			toggled={input.value ? true : false}
-			onToggle={(event, isInputChecked) => {
+			onSwitch={(event, isInputChecked) => {
 				input.onChange(isInputChecked);
 			}}
 			className={className}
@@ -93,21 +94,20 @@ export class MultiSelect extends React.Component {
 
 		const elements = items.map((item, index) => (
 			<div className={`col-xs-12 col-sm-${columnsClass}`} key={index}>
-				{item &&
-					item !== '' && (
-						<ListItem
-							leftCheckbox={
-								<Checkbox
-									checked={this.isCheckboxChecked(item)}
-									disabled={disabled}
-									onCheck={(e, isChecked) => {
-										this.onCheckboxChecked(item);
-									}}
-								/>
-							}
-							primaryText={item}
-						/>
-					)}
+				{item && item !== '' && (
+					<ListItem
+						leftCheckbox={
+							<Checkbox
+								checked={this.isCheckboxChecked(item)}
+								disabled={disabled}
+								onCheck={(e, isChecked) => {
+									this.onCheckboxChecked(item);
+								}}
+							/>
+						}
+						primaryText={item}
+					/>
+				)}
 			</div>
 		));
 

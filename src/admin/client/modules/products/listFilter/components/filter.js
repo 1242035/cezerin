@@ -2,9 +2,9 @@ import React from 'react';
 import messages from 'lib/text';
 import style from './style.css';
 
-import SelectField from '@material-ui/core/SelectField';
+import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import Toggle from '@material-ui/core/Toggle';
+import Switch from '@material-ui/core/Switch';
 
 const Filter = ({
 	filter,
@@ -17,7 +17,7 @@ const Filter = ({
 
 	return (
 		<div className={style.filter}>
-			<SelectField
+			<Select
 				value={enabled}
 				onChange={(event, index, value) => {
 					setEnabled(value);
@@ -28,9 +28,9 @@ const Filter = ({
 				<MenuItem value={null} primaryText={messages.all} label=" " />
 				<MenuItem value={false} primaryText={messages.no} />
 				<MenuItem value={true} primaryText={messages.yes} />
-			</SelectField>
+			</Select>
 
-			<SelectField
+			<Select
 				value={discontinued}
 				onChange={(event, index, value) => {
 					setDiscontinued(value);
@@ -41,9 +41,9 @@ const Filter = ({
 				<MenuItem value={null} primaryText={messages.all} label=" " />
 				<MenuItem value={false} primaryText={messages.no} />
 				<MenuItem value={true} primaryText={messages.yes} />
-			</SelectField>
+			</Select>
 
-			<SelectField
+			<Select
 				value={onSale}
 				onChange={(event, index, value) => {
 					setOnSale(value);
@@ -54,9 +54,9 @@ const Filter = ({
 				<MenuItem value={null} primaryText={messages.all} label=" " />
 				<MenuItem value={false} primaryText={messages.no} />
 				<MenuItem value={true} primaryText={messages.yes} />
-			</SelectField>
+			</Select>
 
-			<SelectField
+			<Select
 				value={stockStatus}
 				onChange={(event, index, value) => {
 					setStock(value);
@@ -79,7 +79,7 @@ const Filter = ({
 					value={'discontinued'}
 					primaryText={messages.products_discontinued}
 				/>
-			</SelectField>
+			</Select>
 		</div>
 	);
 };

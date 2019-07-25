@@ -8,7 +8,6 @@ import messages from 'lib/text';
 import style from './style.css';
 
 import Dialog from '@material-ui/core/Dialog';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 
 class EditPaymentGatewayForm extends React.Component {
@@ -46,7 +45,8 @@ class EditPaymentGatewayForm extends React.Component {
 		if (this.props.gateway && this.props.gateway.length > 0) {
 			return (
 				<div>
-					<Button variant="contained"
+					<Button
+						variant="contained"
 						onClick={this.handleOpen}
 						label={messages.drawer_settings}
 						style={{ margin: '15px 0 30px 0' }}
@@ -67,11 +67,8 @@ class EditPaymentGatewayForm extends React.Component {
 							<GatewaySettings gateway={this.props.gateway} />
 
 							<div className={style.buttons}>
-								<FlatButton
-									label={messages.cancel}
-									onClick={this.handleClose}
-								/>
-								<FlatButton
+								<Button label={messages.cancel} onClick={this.handleClose} />
+								<Button
 									label={messages.save}
 									primary={true}
 									type="submit"

@@ -4,8 +4,9 @@ import messages from 'lib/text';
 
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
-import FontIcon from '@material-ui/core/FontIcon';
-import { List, ListItem } from '@material-ui/core/List';
+import Icon from '@material-ui/core/Icon';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 const CheckoutFieldItem = ({ name, status, path }) => {
 	return (
@@ -17,7 +18,7 @@ const CheckoutFieldItem = ({ name, status, path }) => {
 			>
 				<ListItem
 					rightIcon={
-						<FontIcon className="material-icons">keyboard_arrow_right</FontIcon>
+						<Icon className="material-icons">keyboard_arrow_right</Icon>
 					}
 					primaryText={
 						<div className="row">

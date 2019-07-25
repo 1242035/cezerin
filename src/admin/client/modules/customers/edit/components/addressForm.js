@@ -8,7 +8,6 @@ import style from './style.css';
 
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
-import FlatButton from '@material-ui/core/FlatButton';
 
 const validate = values => {
 	const errors = {};
@@ -120,8 +119,8 @@ class CustomerAddressForm extends React.Component {
 					</div>
 				</div>
 				<div className={style.shippingButtons}>
-					<FlatButton label={messages.cancel} onClick={onCancel} />
-					<FlatButton
+					<Button label={messages.cancel} onClick={onCancel} />
+					<Button
 						label={messages.save}
 						primary={true}
 						type="submit"

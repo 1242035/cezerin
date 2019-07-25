@@ -8,17 +8,17 @@ import style from './style.css';
 import FileUploader from './fileUploader';
 
 import Paper from '@material-ui/core/Paper';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import IconMenu from '@material-ui/core/IconMenu';
+import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 const Fragment = React.Fragment;
 
 const iconButtonElement = (
 	<IconButton touch={true}>
-		<FontIcon color="rgb(189, 189, 189)" className="material-icons">
+		<Icon color="rgb(189, 189, 189)" className="material-icons">
 			more_vert
-		</FontIcon>
+		</Icon>
 	</IconButton>
 );
 
@@ -62,11 +62,11 @@ class FileItem extends React.Component {
 				<div className={style.date + ' col-xs-3'}>{modifiedDateFormated}</div>
 				<div className={style.size + ' col-xs-2'}>{fileSizeFormated}</div>
 				<div className={style.more + ' col-xs-2'}>
-					<IconMenu iconButtonElement={iconButtonElement}>
+					<Menu iconButtonElement={iconButtonElement}>
 						<MenuItem onClick={this.showDelete}>
 							{messages.actions_delete}
 						</MenuItem>
-					</IconMenu>
+					</Menu>
 					<DeleteConfirmation
 						open={this.state.openDelete}
 						isSingle={true}

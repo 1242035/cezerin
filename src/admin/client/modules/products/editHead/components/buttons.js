@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
 import DeleteConfirmation from 'modules/shared/deleteConfirmation';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 const Fragment = React.Fragment;
 
 export default class Buttons extends React.Component {
@@ -43,24 +43,23 @@ export default class Buttons extends React.Component {
 					tooltip={messages.deleteProduct}
 					onClick={this.openDelete}
 				>
-					<FontIcon color="#fff" className="material-icons">
+					<Icon color="#fff" className="material-icons">
 						delete
-					</FontIcon>
+					</Icon>
 				</IconButton>
-				{product &&
-					product.enabled && (
-						<a href={product.url} target="_blank">
-							<IconButton
-								touch={true}
-								tooltipPosition="bottom-left"
-								tooltip={messages.viewOnWebsite}
-							>
-								<FontIcon color="#fff" className="material-icons">
-									open_in_new
-								</FontIcon>
-							</IconButton>
-						</a>
-					)}
+				{product && product.enabled && (
+					<a href={product.url} target="_blank">
+						<IconButton
+							touch={true}
+							tooltipPosition="bottom-left"
+							tooltip={messages.viewOnWebsite}
+						>
+							<Icon color="#fff" className="material-icons">
+								open_in_new
+							</Icon>
+						</IconButton>
+					</a>
+				)}
 				<DeleteConfirmation
 					open={this.state.openDelete}
 					isSingle={true}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 
 const Buttons = () => (
@@ -12,9 +12,9 @@ const Buttons = () => (
 				tooltipPosition="bottom-left"
 				tooltip={messages.settings_addPaymentMethod}
 			>
-				<FontIcon color="#fff" className="material-icons">
+				<Icon color="#fff" className="material-icons">
 					add
-				</FontIcon>
+				</Icon>
 			</IconButton>
 		</Link>
 	</span>

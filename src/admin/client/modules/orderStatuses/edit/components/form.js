@@ -6,7 +6,6 @@ import messages from 'lib/text';
 import style from './style.css';
 
 import Paper from '@material-ui/core/Paper';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 
 const validate = values => {
@@ -63,12 +62,13 @@ class Form extends React.Component {
 						/>
 					</div>
 					<div className="buttons-box">
-						<FlatButton
+						<Button
 							label={messages.cancel}
 							className={style.button}
 							onClick={this.props.onCancel}
 						/>
-						<Button variant="contained"
+						<Button
+							variant="contained"
 							type="submit"
 							label={statusId ? messages.save : messages.add}
 							primary={true}

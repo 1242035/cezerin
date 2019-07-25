@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
-import FontIcon from '@material-ui/core/FontIcon';
-import { List, ListItem } from '@material-ui/core/List';
+import Icon from '@material-ui/core/Icon';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 const PageItem = ({ page }) => {
 	const tags = page.tags && page.tags.length > 0 ? page.tags.join(', ') : '';
@@ -15,11 +16,11 @@ const PageItem = ({ page }) => {
 			<Link to={`/admin/pages/${page.id}`} style={{ textDecoration: 'none' }}>
 				<ListItem
 					rightIcon={
-						<FontIcon className="material-icons">keyboard_arrow_right</FontIcon>
+						<Icon className="material-icons">keyboard_arrow_right</Icon>
 					}
 					leftIcon={
 						page.is_system ? (
-							<FontIcon className="material-icons">lock_outline</FontIcon>
+							<Icon className="material-icons">lock_outline</Icon>
 						) : null
 					}
 					style={!page.enabled ? { color: 'rgba(0, 0, 0, 0.3)' } : {}}

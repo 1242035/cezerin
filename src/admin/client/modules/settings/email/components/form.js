@@ -4,8 +4,9 @@ import messages from 'lib/text';
 
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
-import FontIcon from '@material-ui/core/FontIcon';
-import { List, ListItem } from '@material-ui/core/List';
+import Icon from '@material-ui/core/Icon';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 export default class EmailSettings extends React.Component {
 	constructor(props) {
@@ -34,9 +35,7 @@ export default class EmailSettings extends React.Component {
 							>
 								<ListItem
 									rightIcon={
-										<FontIcon className="material-icons">
-											keyboard_arrow_right
-										</FontIcon>
+										<Icon className="material-icons">keyboard_arrow_right</Icon>
 									}
 									primaryText={
 										<div className="row">
@@ -68,21 +67,19 @@ export default class EmailSettings extends React.Component {
 							>
 								<ListItem
 									rightIcon={
-										<FontIcon className="material-icons">
-											keyboard_arrow_right
-										</FontIcon>
+										<Icon className="material-icons">keyboard_arrow_right</Icon>
 									}
 									primaryText={messages.settings_orderConfirmation}
 								/>
 							</Link>
 							{/* <ListItem
-                  rightIcon={<FontIcon className="material-icons">keyboard_arrow_right</FontIcon>}
+                  rightIcon={<Icon className="material-icons">keyboard_arrow_right</Icon>}
                   primaryText={messages.settings_customerRegistration}
                   onClick={() => { pushUrl('/admin/settings/email/templates/customer_registration') }}
                 />
                 <Divider />
                 <ListItem
-                  rightIcon={<FontIcon className="material-icons">keyboard_arrow_right</FontIcon>}
+                  rightIcon={<Icon className="material-icons">keyboard_arrow_right</Icon>}
                   primaryText={messages.settings_customerRecovery}
                   onClick={() => { pushUrl('/admin/settings/email/templates/customer_recovery') }}
                 />

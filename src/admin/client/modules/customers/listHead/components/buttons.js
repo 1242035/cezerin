@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import messages from 'lib/text';
 import GroupSelect from 'modules/customerGroups/select';
 import DeleteConfirmation from 'modules/shared/deleteConfirmation';
-import FontIcon from '@material-ui/core/FontIcon';
-import IconMenu from '@material-ui/core/IconMenu';
+import Icon from '@material-ui/core/Icon';
+import Menu from '@material-ui/core/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import Dialog from '@material-ui/core/Dialog';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Search from './search';
@@ -57,12 +56,12 @@ export default class Buttons extends React.Component {
 		const { search, setSearch, selectedCount, onDelete } = this.props;
 
 		const actionsSetGroup = [
-			<FlatButton
+			<Button
 				label={messages.cancel}
 				onClick={this.closeSetGroup}
 				style={{ marginRight: 10 }}
 			/>,
-			<FlatButton
+			<Button
 				label={messages.save}
 				primary={true}
 				keyboardFocused={true}
@@ -81,9 +80,9 @@ export default class Buttons extends React.Component {
 							tooltip={messages.actions_delete}
 							onClick={this.showDelete}
 						>
-							<FontIcon color="#fff" className="material-icons">
+							<Icon color="#fff" className="material-icons">
 								delete
-							</FontIcon>
+							</Icon>
 						</IconButton>
 						<IconButton
 							touch={true}
@@ -91,9 +90,9 @@ export default class Buttons extends React.Component {
 							tooltip={messages.customers_setGroup}
 							onClick={this.showSetGroup}
 						>
-							<FontIcon color="#fff" className="material-icons">
+							<Icon color="#fff" className="material-icons">
 								folder
-							</FontIcon>
+							</Icon>
 						</IconButton>
 						<DeleteConfirmation
 							open={this.state.openDelete}

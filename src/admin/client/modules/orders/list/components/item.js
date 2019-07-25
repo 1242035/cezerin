@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Checkbox from '@material-ui/core/Checkbox';
-import { ListItem } from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
-import FontIcon from '@material-ui/core/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import messages from 'lib/text';
 import * as helper from 'lib/helper';
 import style from './style.css';
@@ -14,79 +14,79 @@ const getOrderStateIcons = order => {
 
 	if (order.hold) {
 		icons.push(
-			<FontIcon
+			<Icon
 				key="hold"
 				title={messages.orders_hold}
 				style={{ color: 'rgba(0, 0, 0, 0.2)' }}
 				className="material-icons"
 			>
 				pause_circle_outline
-			</FontIcon>
+			</Icon>
 		);
 	}
 
 	if (order.paid) {
 		icons.push(
-			<FontIcon
+			<Icon
 				key="paid"
 				title={messages.orders_paid}
 				style={{ color: 'rgba(251, 184, 41, 1)' }}
 				className="material-icons"
 			>
 				monetization_on
-			</FontIcon>
+			</Icon>
 		);
 	}
 
 	if (order.delivered) {
 		icons.push(
-			<FontIcon
+			<Icon
 				key="delivered"
 				title={messages.orders_delivered}
 				style={{ color: 'rgba(127, 175, 27, 1)' }}
 				className="material-icons"
 			>
 				local_shipping
-			</FontIcon>
+			</Icon>
 		);
 	}
 
 	if (order.cancelled) {
 		return [
-			<FontIcon
+			<Icon
 				key="cancelled"
 				title={messages.orders_cancelled}
 				style={{ color: 'rgba(0, 0, 0, 0.3)' }}
 				className="material-icons"
 			>
 				not_interested
-			</FontIcon>
+			</Icon>
 		];
 	}
 
 	if (order.closed) {
 		return [
-			<FontIcon
+			<Icon
 				key="closed"
 				title={messages.orders_closed}
 				style={{ color: 'rgba(127, 175, 27, 1)' }}
 				className="material-icons"
 			>
 				done
-			</FontIcon>
+			</Icon>
 		];
 	}
 
 	if (icons.length === 0 && order.draft) {
 		icons.unshift(
-			<FontIcon
+			<Icon
 				key="draft"
 				title={messages.orders_draft}
 				style={{ color: 'rgba(0, 0, 0, 0.1)' }}
 				className="material-icons"
 			>
 				edit
-			</FontIcon>
+			</Icon>
 		);
 	}
 

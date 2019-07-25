@@ -4,7 +4,6 @@ import messages from 'lib/text';
 import * as helper from 'lib/helper';
 import style from './style.css';
 
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 

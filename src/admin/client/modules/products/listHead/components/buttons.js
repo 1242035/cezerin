@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import messages from 'lib/text';
 import CategorySelect from 'modules/productCategories/select';
 import DeleteConfirmation from 'modules/shared/deleteConfirmation';
-import FontIcon from '@material-ui/core/FontIcon';
-import IconMenu from '@material-ui/core/IconMenu';
+import Icon from '@material-ui/core/Icon';
+import Menu from '@material-ui/core/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import Dialog from '@material-ui/core/Dialog';
-import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 import Search from './search';
 const Fragment = React.Fragment;
 
@@ -55,12 +55,12 @@ export default class Buttons extends React.Component {
 		const { search, setSearch, selectedCount, onDelete, onCreate } = this.props;
 
 		const actionsMoveTo = [
-			<FlatButton
+			<Button
 				label={messages.cancel}
 				onClick={this.closeMoveTo}
 				style={{ marginRight: 10 }}
 			/>,
-			<FlatButton
+			<Button
 				label={messages.actions_moveHere}
 				primary={true}
 				keyboardFocused={true}
@@ -79,9 +79,9 @@ export default class Buttons extends React.Component {
 							tooltip={messages.actions_delete}
 							onClick={this.openDelete}
 						>
-							<FontIcon color="#fff" className="material-icons">
+							<Icon color="#fff" className="material-icons">
 								delete
-							</FontIcon>
+							</Icon>
 						</IconButton>
 						<IconButton
 							touch={true}
@@ -89,9 +89,9 @@ export default class Buttons extends React.Component {
 							tooltip={messages.actions_moveTo}
 							onClick={this.showMoveTo}
 						>
-							<FontIcon color="#fff" className="material-icons">
+							<Icon color="#fff" className="material-icons">
 								folder
-							</FontIcon>
+							</Icon>
 						</IconButton>
 						<DeleteConfirmation
 							open={this.state.openDelete}
@@ -122,9 +122,9 @@ export default class Buttons extends React.Component {
 					tooltip={messages.addProduct}
 					onClick={onCreate}
 				>
-					<FontIcon color="#fff" className="material-icons">
+					<Icon color="#fff" className="material-icons">
 						add
-					</FontIcon>
+					</Icon>
 				</IconButton>
 			</Fragment>
 		);

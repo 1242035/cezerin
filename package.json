@@ -31,6 +31,9 @@
     "type": "git",
     "url": "https://github.com/cezerin/cezerin"
   },
+  "husky": {
+    "hooks": {}
+  },
   "scripts": {
     "setup": "node -r esm src/api/server/setup.js",
     "compile": "babel src/store -d dist/store",
@@ -61,9 +64,12 @@
   "dependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@material-ui/core": "^4.2.1",
+    "@material-ui/lab": "^4.0.0-alpha.20",
+    "@material-ui/styles": "^4.2.1",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-react-transform": "^3.0.0",
@@ -131,7 +137,7 @@
     "sitemap": "^3.2.2",
     "slug": "^1.1.0",
     "stripe": "^7.4.0",
-    "theme": "file:theme",
+    "theme": "file:./theme",
     "ua-parser-js": "^0.7.18",
     "webpack": "^4.37.0",
     "webpack-cli": "^3.1.0",

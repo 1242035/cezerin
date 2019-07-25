@@ -6,9 +6,8 @@ import messages from 'lib/text';
 import style from './style.css';
 
 import Paper from '@material-ui/core/Paper';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 
 const AttributesGrid = ({ fields, meta: { touched, error, submitFailed } }) => {
@@ -56,13 +55,13 @@ const AttributesGrid = ({ fields, meta: { touched, error, submitFailed } }) => {
 								onClick={() => fields.remove(index)}
 								tabIndex={-1}
 							>
-								<FontIcon
+								<Icon
 									color="#a1a1a1"
 									className="material-icons"
 									data-index={index}
 								>
 									delete
-								</FontIcon>
+								</Icon>
 							</IconButton>
 						</div>
 					</div>
@@ -70,7 +69,8 @@ const AttributesGrid = ({ fields, meta: { touched, error, submitFailed } }) => {
 			})}
 
 			<div style={{ margin: 30 }}>
-				<Button variant="contained"
+				<Button
+					variant="contained"
 					label={messages.addAttribute}
 					onClick={() => fields.push({})}
 				/>
@@ -96,13 +96,14 @@ const ProductAttributesForm = ({
 						(pristine ? 'buttons-box-pristine' : 'buttons-box-show')
 					}
 				>
-					<FlatButton
+					<Button
 						label={messages.cancel}
 						className={style.button}
 						onClick={reset}
 						disabled={pristine || submitting}
 					/>
-					<Button variant="contained"
+					<Button
+						variant="contained"
 						type="submit"
 						label={messages.save}
 						primary={true}

@@ -3,11 +3,10 @@ import messages from 'lib/text';
 import ConfirmationDialog from 'modules/shared/confirmation';
 import ProductSearchDialog from 'modules/shared/productSearch';
 import DeleteConfirmation from 'modules/shared/deleteConfirmation';
-import FontIcon from '@material-ui/core/FontIcon';
-import IconMenu from '@material-ui/core/IconMenu';
+import Icon from '@material-ui/core/Icon';
+import Menu from '@material-ui/core/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 
@@ -176,12 +175,12 @@ export default class Buttons extends React.Component {
 						onDelete={this.deleteOrder}
 					/>
 
-					<IconMenu
+					<Menu
 						iconButtonElement={
 							<IconButton touch={true}>
-								<FontIcon color="#fff" className="material-icons">
+								<Icon color="#fff" className="material-icons">
 									more_vert
-								</FontIcon>
+								</Icon>
 							</IconButton>
 						}
 						targetOrigin={{ horizontal: 'right', vertical: 'top' }}
@@ -192,7 +191,7 @@ export default class Buttons extends React.Component {
 							primaryText={messages.deleteOrder}
 							onClick={this.openDelete}
 						/>
-					</IconMenu>
+					</Menu>
 				</span>
 			);
 		} else {

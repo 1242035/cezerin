@@ -2,9 +2,9 @@ import React from 'react';
 import messages from 'lib/text';
 import style from './style.css';
 
-import SelectField from '@material-ui/core/SelectField';
+import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import Toggle from '@material-ui/core/Toggle';
+import Switch from '@material-ui/core/Switch';
 
 export default ({
 	active,
@@ -18,31 +18,31 @@ export default ({
 }) => {
 	return (
 		<div className={style.filter}>
-			<Toggle
+			<Switch
 				label={messages.products_onlyEnabled}
-				onToggle={(e, value) => {
+				onSwitch={(e, value) => {
 					setActive(value);
 				}}
 				toggled={active}
 				className={style.toggle}
 			/>
-			<Toggle
+			<Switch
 				label={messages.products_onlyDiscontinued}
-				onToggle={(e, value) => {
+				onSwitch={(e, value) => {
 					setDiscontinued(value);
 				}}
 				toggled={discontinued}
 				className={style.toggle}
 			/>
-			<Toggle
+			<Switch
 				label={messages.products_onlyOnSale}
-				onToggle={(e, value) => {
+				onSwitch={(e, value) => {
 					setOnSale(value);
 				}}
 				toggled={on_sale}
 				className={style.toggle}
 			/>
-			<SelectField
+			<Select
 				value={stock_status}
 				onChange={(event, index, value) => {
 					setStock(value);
@@ -65,7 +65,7 @@ export default ({
 					value={'discontinued'}
 					primaryText={messages.products_discontinued}
 				/>
-			</SelectField>
+			</Select>
 		</div>
 	);
 };

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
-import { List, ListItem } from '@material-ui/core/List';
-import FontIcon from '@material-ui/core/FontIcon';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Icon from '@material-ui/core/Icon';
 import Checkbox from '@material-ui/core/Checkbox';
 
 const styles = {
@@ -17,10 +18,8 @@ const styles = {
 	}
 };
 
-const FolderIcon = <FontIcon className="material-icons">folder</FontIcon>;
-const DraftIcon = (
-	<FontIcon className="material-icons">visibility_off</FontIcon>
-);
+const FolderIcon = <Icon className="material-icons">folder</Icon>;
+const DraftIcon = <Icon className="material-icons">visibility_off</Icon>;
 
 class Item extends React.PureComponent {
 	constructor(props) {

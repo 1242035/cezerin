@@ -5,9 +5,9 @@ import style from './style.css';
 import DynamicEditControl from './dynamicEditControl';
 
 import Paper from '@material-ui/core/Paper';
-import FlatButton from '@material-ui/core/FlatButton';
-import FontIcon from '@material-ui/core/FontIcon';
-import FloatingActionButton from '@material-ui/core/FloatingActionButton';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
+import Fab from '@material-ui/core/Fab';
 
 const ArrayEditor = ({
 	label,
@@ -19,14 +19,14 @@ const ArrayEditor = ({
 		<div>
 			<div className={style.arrayTitle}>
 				{label}
-				<FloatingActionButton
+				<Fab
 					mini={true}
 					secondary={true}
 					onClick={() => fields.push({})}
 					style={{ marginLeft: '20px' }}
 				>
-					<FontIcon className="material-icons">add</FontIcon>
-				</FloatingActionButton>
+					<Icon className="material-icons">add</Icon>
+				</Fab>
 			</div>
 
 			<ol style={{ listStyle: 'none' }}>
@@ -37,21 +37,21 @@ const ArrayEditor = ({
 							zDepth={1}
 						>
 							<div className={style.arrayItemHead}>
-								<FlatButton
+								<Button
 									label={messages.actions_delete}
 									secondary={true}
 									onClick={() => fields.remove(index)}
 								/>
 
 								{index > 0 && (
-									<FlatButton
+									<Button
 										label={messages.actions_moveUp}
 										onClick={() => fields.move(index, index - 1)}
 									/>
 								)}
 
 								{index + 1 < fields.length && (
-									<FlatButton
+									<Button
 										label={messages.actions_moveDown}
 										onClick={() => fields.move(index, index + 1)}
 									/>

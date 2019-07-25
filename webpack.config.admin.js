@@ -65,7 +65,10 @@ module.exports = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['@babel/preset-env', '@babel/preset-react'],
-						plugins: ['@babel/plugin-proposal-object-rest-spread']
+						plugins: [
+							'@babel/plugin-proposal-object-rest-spread',
+							'@babel/plugin-proposal-class-properties'
+						]
 					}
 				}
 			},
@@ -93,8 +96,7 @@ module.exports = {
 						loader: 'css-loader',
 						options: {
 							modules: true,
-							importLoaders: true,
-							localIdentName: '[name]__[local]___[hash:base64:5]'
+							importLoaders: true
 						}
 					},
 					'postcss-loader'

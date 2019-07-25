@@ -8,7 +8,7 @@ import style from './style.css';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
-import { RadioButton } from '@material-ui/core/RadioButton';
+import Radio from '@material-ui/core/Radio';
 
 const radioButtonStyle = {
 	marginTop: 14,
@@ -75,7 +75,8 @@ class CheckoutFieldForm extends React.Component {
 						</div>
 					</div>
 					<div className="buttons-box">
-						<Button variant="contained"
+						<Button
+							variant="contained"
 							type="submit"
 							label={messages.save}
 							primary={true}

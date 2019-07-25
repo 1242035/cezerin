@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import messages from 'lib/text';
 
 import Divider from '@material-ui/core/Divider';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import Drawer from '@material-ui/core/Drawer';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -103,36 +103,33 @@ const styles = {
 };
 
 const DrawerMenu = ({ open, onClose, currentUrl }) => {
-	const items = menuItems.map(
-		(item, index) =>
-			item.title === '-' ? (
-				<Divider key={index} />
-			) : (
-				<NavLink
-					to={item.url}
-					key={index}
-					exact={true}
-					style={styles.link}
-					activeStyle={styles.linkActive}
-				>
-					<MenuItem
-						onClick={onClose}
-						primaryText={item.title}
-						innerDivStyle={styles.itemInnerDiv}
-						style={styles.item}
-						leftIcon={
-							<FontIcon
-								style={
-									item.url === currentUrl ? styles.iconActive : styles.icon
-								}
-								className="material-icons"
-							>
-								{item.icon}
-							</FontIcon>
-						}
-					/>
-				</NavLink>
-			)
+	const items = menuItems.map((item, index) =>
+		item.title === '-' ? (
+			<Divider key={index} />
+		) : (
+			<NavLink
+				to={item.url}
+				key={index}
+				exact={true}
+				style={styles.link}
+				activeStyle={styles.linkActive}
+			>
+				<MenuItem
+					onClick={onClose}
+					primaryText={item.title}
+					innerDivStyle={styles.itemInnerDiv}
+					style={styles.item}
+					leftIcon={
+						<Icon
+							style={item.url === currentUrl ? styles.iconActive : styles.icon}
+							className="material-icons"
+						>
+							{item.icon}
+						</Icon>
+					}
+				/>
+			</NavLink>
+		)
 	);
 
 	return (
@@ -144,9 +141,9 @@ const DrawerMenu = ({ open, onClose, currentUrl }) => {
 				zDepth={0}
 				iconElementLeft={
 					<IconButton onClick={onClose}>
-						<FontIcon color="#9e9e9e" className="material-icons">
+						<Icon color="#9e9e9e" className="material-icons">
 							menu
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				}
 			/>

@@ -9,8 +9,8 @@ import style from './style.css';
 
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
-import FontIcon from '@material-ui/core/FontIcon';
-import IconMenu from '@material-ui/core/IconMenu';
+import Icon from '@material-ui/core/Icon';
+import Menu from '@material-ui/core/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 
@@ -62,14 +62,14 @@ const FieldsEditor = ({ fields, meta: { touched, error, submitFailed } }) => {
 								/>
 							</div>
 							<div className="col-xs-1">
-								<IconMenu
+								<Menu
 									targetOrigin={{ horizontal: 'right', vertical: 'top' }}
 									anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
 									iconButtonElement={
 										<IconButton touch={true}>
-											<FontIcon color="#777" className="material-icons">
+											<Icon color="#777" className="material-icons">
 												more_vert
-											</FontIcon>
+											</Icon>
 										</IconButton>
 									}
 								>
@@ -89,7 +89,7 @@ const FieldsEditor = ({ fields, meta: { touched, error, submitFailed } }) => {
 											onClick={() => fields.move(index, index + 1)}
 										/>
 									)}
-								</IconMenu>
+								</Menu>
 							</div>
 						</div>
 					</Paper>
@@ -97,7 +97,11 @@ const FieldsEditor = ({ fields, meta: { touched, error, submitFailed } }) => {
 			})}
 
 			<div style={{ margin: '20px 0px' }}>
-				<Button variant="contained" label={messages.add} onClick={() => fields.push({})} />
+				<Button
+					variant="contained"
+					label={messages.add}
+					onClick={() => fields.push({})}
+				/>
 			</div>
 		</div>
 	);

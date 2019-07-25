@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Checkbox from '@material-ui/core/Checkbox';
-import { ListItem } from '@material-ui/core/List';
+
+import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
-import Icon from '@material-ui/core/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import messages from 'lib/text';
 import * as helper from 'lib/helper';
 import style from './style.css';
@@ -40,22 +41,21 @@ const CustomersListItem = ({ customer, onSelect, selected, settings }) => {
 							</Link>
 						</div>
 						<div className={'col-xs-3 ' + style.location}>
-							{customer.shipping &&
-								customer.shipping.city && (
-									<span>
-										<Icon
-											style={{
-												color: 'rgba(0, 0, 0, 0.4)',
-												fontSize: 16,
-												marginRight: 6
-											}}
-											className="material-icons"
-										>
-											place
-										</Icon>
-										{customer.shipping.city}
-									</span>
-								)}
+							{customer.shipping && customer.shipping.city && (
+								<span>
+									<Icon
+										style={{
+											color: 'rgba(0, 0, 0, 0.4)',
+											fontSize: 16,
+											marginRight: 6
+										}}
+										className="material-icons"
+									>
+										place
+									</Icon>
+									{customer.shipping.city}
+								</span>
+							)}
 						</div>
 						<div className="col-xs-1">{customer.orders_count || 0}</div>
 						<div className="col-xs-2">

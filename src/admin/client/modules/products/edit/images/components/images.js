@@ -4,7 +4,7 @@ import Gallery from 'modules/shared/imageUploadMultiple';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
-import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 
 export default class ProductImages extends React.Component {
 	constructor(props) {
@@ -53,12 +53,12 @@ export default class ProductImages extends React.Component {
 		const alt = imageData ? imageData.alt : '';
 
 		const dialogButtons = [
-			<FlatButton
+			<Button
 				label={messages.cancel}
 				onClick={this.closeEdit}
 				style={{ marginRight: 10 }}
 			/>,
-			<FlatButton
+			<Button
 				label={messages.save}
 				primary={true}
 				keyboardFocused={true}

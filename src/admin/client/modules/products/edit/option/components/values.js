@@ -5,7 +5,7 @@ import messages from 'lib/text';
 import style from './style.css';
 
 import Paper from '@material-ui/core/Paper';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 
 class OptionValueEdit extends React.Component {
@@ -51,9 +51,9 @@ class OptionValueEdit extends React.Component {
 						onClick={this.onDelete}
 						tabIndex={-1}
 					>
-						<FontIcon color="#a1a1a1" className="material-icons">
+						<Icon color="#a1a1a1" className="material-icons">
 							delete
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</div>
 			</div>
@@ -110,9 +110,9 @@ class OptionValueAdd extends React.Component {
 						onClick={this.onCreate}
 						tabIndex={-1}
 					>
-						<FontIcon color="#a1a1a1" className="material-icons">
+						<Icon color="#a1a1a1" className="material-icons">
 							add_circle
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</div>
 			</div>

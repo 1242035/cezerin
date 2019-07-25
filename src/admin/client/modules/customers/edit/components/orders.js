@@ -9,8 +9,9 @@ import style from './style.css';
 
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
-import Icon from '@material-ui/core/core/FontIcon';
-import { List, ListItem } from '@material-ui/core/List';
+import Icon from '@material-ui/core/Icon';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 const getOrderStates = order => {
 	let states = [];

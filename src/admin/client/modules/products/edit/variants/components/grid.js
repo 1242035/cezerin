@@ -5,11 +5,11 @@ import messages from 'lib/text';
 import style from './style.css';
 
 import Paper from '@material-ui/core/Paper';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
-import DropDownMenu from '@material-ui/core/DropDownMenu';
+import MenuList from '@material-ui/core/MenuList';
 
 class VariantInput extends React.Component {
 	constructor(props) {
@@ -69,7 +69,7 @@ const VariantRow = ({
 				));
 			return (
 				<div key={option.id} className={style.gridCol}>
-					<DropDownMenu
+					<MenuList
 						value={variantOptionValueId}
 						style={{ width: '100%' }}
 						underlineStyle={{ border: 'none' }}
@@ -78,7 +78,7 @@ const VariantRow = ({
 						}}
 					>
 						{menuItems}
-					</DropDownMenu>
+					</MenuList>
 				</div>
 			);
 		} else {
@@ -133,9 +133,9 @@ const VariantRow = ({
 					}}
 					tabIndex={-1}
 				>
-					<FontIcon color="#a1a1a1" className="material-icons">
+					<Icon color="#a1a1a1" className="material-icons">
 						delete
-					</FontIcon>
+					</Icon>
 				</IconButton>
 			</div>
 		</div>
@@ -202,13 +202,18 @@ const ProductVariantsGrid = ({
 				{variantRows}
 			</div>
 			<div className={style.innerBox}>
-				<Button variant="contained"
+				<Button
+					variant="contained"
 					label={messages.addVariant}
 					onClick={createVariant}
 					style={{ marginRight: 20 }}
 					disabled={!hasOptions}
 				/>
-				<Button variant="contained" label={messages.addOption} onClick={createOption} />
+				<Button
+					variant="contained"
+					label={messages.addOption}
+					onClick={createOption}
+				/>
 			</div>
 		</Paper>
 	);

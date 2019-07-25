@@ -4,7 +4,7 @@ import Dropzone from 'react-dropzone';
 
 import Paper from '@material-ui/core/Paper';
 import Snackbar from '@material-ui/core/Snackbar';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 
 import style from './style.css';
@@ -47,12 +47,12 @@ export default class ImageUpload extends React.Component {
 
 		let htmlPreview = (
 			<div className={style.noImage}>
-				<FontIcon
+				<Icon
 					style={{ fontSize: 90, color: '#cccccc' }}
 					className="material-icons"
 				>
 					photo_camera
-				</FontIcon>
+				</Icon>
 				<div className={style.dropText}>{messages.help_dropHere}</div>
 			</div>
 		);
@@ -90,9 +90,9 @@ export default class ImageUpload extends React.Component {
 						}}
 						tooltipPosition="top-right"
 					>
-						<FontIcon color="rgba(0,0,0,0.5)" className="material-icons">
+						<Icon color="rgba(0,0,0,0.5)" className="material-icons">
 							file_upload
-						</FontIcon>
+						</Icon>
 					</IconButton>
 					{hasPreview && (
 						<IconButton
@@ -101,9 +101,9 @@ export default class ImageUpload extends React.Component {
 							onClick={this.onDelete}
 							tooltipPosition="top-right"
 						>
-							<FontIcon color="rgba(0,0,0,0.5)" className="material-icons">
+							<Icon color="rgba(0,0,0,0.5)" className="material-icons">
 								delete
-							</FontIcon>
+							</Icon>
 						</IconButton>
 					)}
 				</div>

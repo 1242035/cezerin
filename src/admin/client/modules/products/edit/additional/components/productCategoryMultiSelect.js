@@ -3,9 +3,8 @@ import { Field, FieldArray, reduxForm } from 'redux-form';
 import messages from 'lib/text';
 import style from './style.css';
 import CategoryMultiselect from 'modules/productCategories/components/multiselectList';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import Dialog from '@material-ui/core/Dialog';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 const Fragment = React.Fragment;
 
@@ -66,12 +65,12 @@ export default class ProductCategoryMultiSelect extends React.Component {
 		const selectedIds = fields.getAll();
 
 		const dialogButtons = [
-			<FlatButton
+			<Button
 				label={messages.cancel}
 				onClick={this.close}
 				style={{ marginRight: 10 }}
 			/>,
-			<FlatButton
+			<Button
 				label={messages.save}
 				primary={true}
 				keyboardFocused={true}
@@ -112,13 +111,13 @@ export default class ProductCategoryMultiSelect extends React.Component {
 							onCheck={this.handleCheck}
 						/>
 					</Dialog>
-					<FlatButton
+					<Button
 						style={{ minWidth: 52 }}
 						onClick={this.open}
 						icon={
-							<FontIcon color="#333" className="material-icons">
+							<Icon color="#333" className="material-icons">
 								add
-							</FontIcon>
+							</Icon>
 						}
 					/>
 				</span>

@@ -10,12 +10,11 @@ import ConfirmationDialog from 'modules/shared/confirmation';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
-import FontIcon from '@material-ui/core/FontIcon';
-import IconMenu from '@material-ui/core/IconMenu';
+import Icon from '@material-ui/core/Icon';
+import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import SelectField from '@material-ui/core/SelectField';
+import Select from '@material-ui/core/Select';
 import Dialog from '@material-ui/core/Dialog';
 
 const Address = ({ address }) => {
@@ -38,9 +37,9 @@ const Address = ({ address }) => {
 
 const iconButtonElement = (
 	<IconButton touch={true}>
-		<FontIcon color="rgb(189, 189, 189)" className="material-icons">
+		<Icon color="rgb(189, 189, 189)" className="material-icons">
 			more_vert
-		</FontIcon>
+		</Icon>
 	</IconButton>
 );
 
@@ -105,7 +104,7 @@ class CustomerAddress extends React.Component {
 					<div className="row middle-xs">
 						<div className="col-xs-10">{title}</div>
 						<div className="col-xs-2">
-							<IconMenu iconButtonElement={iconButtonElement}>
+							<Menu iconButtonElement={iconButtonElement}>
 								<MenuItem onClick={this.showEditForm}>{messages.edit}</MenuItem>
 								<MenuItem onClick={this.showDelete}>
 									{messages.actions_delete}
@@ -122,7 +121,7 @@ class CustomerAddress extends React.Component {
 								>
 									{messages.setDefaultShippingAddress}
 								</MenuItem>
-							</IconMenu>
+							</Menu>
 						</div>
 					</div>
 					<Address address={address} />

@@ -10,12 +10,11 @@ import SummaryForm from './summaryForm.js';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
-import FontIcon from '@material-ui/core/FontIcon';
-import IconMenu from '@material-ui/core/IconMenu';
+import Icon from '@material-ui/core/Icon';
+import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import SelectField from '@material-ui/core/SelectField';
+import Select from '@material-ui/core/Select';
 import Dialog from '@material-ui/core/Dialog';
 
 export default class CustomerSummary extends React.Component {
@@ -89,7 +88,8 @@ export default class CustomerSummary extends React.Component {
 					</div>
 
 					<div style={{ marginTop: 20 }}>
-						<Button variant="contained"
+						<Button
+							variant="contained"
 							label="Edit"
 							style={{ marginRight: 15 }}
 							onClick={this.showSummaryEdit}

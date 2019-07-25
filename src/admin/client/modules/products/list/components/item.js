@@ -1,19 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import messages from 'lib/text';
 import * as helper from 'lib/helper';
 import style from './style.css';
 
 const THUMBNAIL_WIDTH = 100;
 const ImagePlaceholder = (
-	<FontIcon
-		style={{ fontSize: 30, color: '#cccccc' }}
-		className="material-icons"
-	>
+	<Icon style={{ fontSize: 30, color: '#cccccc' }} className="material-icons">
 		photo_camera
-	</FontIcon>
+	</Icon>
 );
 
 const ItemImage = ({ images }) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import messages from 'lib/text';
 import style from './style.css';
-import SelectField from '@material-ui/core/SelectField';
+import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
 export default ({
@@ -20,7 +20,7 @@ export default ({
 }) => {
 	return (
 		<div className={style.filter}>
-			<SelectField
+			<Select
 				className={style.select}
 				fullWidth={true}
 				value={isDraft}
@@ -32,9 +32,9 @@ export default ({
 				<MenuItem value={null} primaryText={messages.all} label=" " />
 				<MenuItem value={false} primaryText={messages.no} />
 				<MenuItem value={true} primaryText={messages.yes} />
-			</SelectField>
+			</Select>
 
-			<SelectField
+			<Select
 				className={style.select}
 				fullWidth={true}
 				value={isHold}
@@ -46,9 +46,9 @@ export default ({
 				<MenuItem value={null} primaryText={messages.all} label=" " />
 				<MenuItem value={false} primaryText={messages.no} />
 				<MenuItem value={true} primaryText={messages.yes} />
-			</SelectField>
+			</Select>
 
-			<SelectField
+			<Select
 				className={style.select}
 				fullWidth={true}
 				value={isPaid}
@@ -60,9 +60,9 @@ export default ({
 				<MenuItem value={null} primaryText={messages.all} label=" " />
 				<MenuItem value={false} primaryText={messages.no} />
 				<MenuItem value={true} primaryText={messages.yes} />
-			</SelectField>
+			</Select>
 
-			<SelectField
+			<Select
 				className={style.select}
 				fullWidth={true}
 				value={isDelivered}
@@ -74,9 +74,9 @@ export default ({
 				<MenuItem value={null} primaryText={messages.all} label=" " />
 				<MenuItem value={false} primaryText={messages.no} />
 				<MenuItem value={true} primaryText={messages.yes} />
-			</SelectField>
+			</Select>
 
-			<SelectField
+			<Select
 				className={style.select}
 				fullWidth={true}
 				value={isCancelled}
@@ -88,9 +88,9 @@ export default ({
 				<MenuItem value={null} primaryText={messages.all} label=" " />
 				<MenuItem value={false} primaryText={messages.no} />
 				<MenuItem value={true} primaryText={messages.yes} />
-			</SelectField>
+			</Select>
 
-			<SelectField
+			<Select
 				className={style.select}
 				fullWidth={true}
 				value={isClosed}
@@ -102,7 +102,7 @@ export default ({
 				<MenuItem value={null} primaryText={messages.all} label=" " />
 				<MenuItem value={false} primaryText={messages.no} />
 				<MenuItem value={true} primaryText={messages.yes} />
-			</SelectField>
+			</Select>
 		</div>
 	);
 };

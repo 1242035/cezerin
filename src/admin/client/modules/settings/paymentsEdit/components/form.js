@@ -13,7 +13,8 @@ import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
-import { List, ListItem } from '@material-ui/core/List';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 import Checkbox from '@material-ui/core/Checkbox';
 
 const validate = values => {
@@ -192,7 +193,8 @@ class EditPaymentMethodForm extends React.Component {
 						</div>
 					</div>
 					<div className="buttons-box">
-						<Button variant="contained"
+						<Button
+							variant="contained"
 							type="submit"
 							label={isAdd ? messages.add : messages.save}
 							primary={true}

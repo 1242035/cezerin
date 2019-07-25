@@ -7,7 +7,7 @@ import style from './style.css';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 
 const ServiceDescription = ({
 	service,
@@ -32,7 +32,8 @@ const ServiceDescription = ({
 								<h1 className={style.title}>{service.name}</h1>
 								<div className={style.developer}>{service.developer.name}</div>
 								{!service.enabled && (
-									<Button variant="contained"
+									<Button
+										variant="contained"
 										label={messages.enable}
 										primary={true}
 										disabled={loadingEnableDisable}
@@ -40,7 +41,8 @@ const ServiceDescription = ({
 									/>
 								)}
 								{service.enabled && (
-									<Button variant="contained"
+									<Button
+										variant="contained"
 										label={messages.disable}
 										disabled={loadingEnableDisable}
 										onClick={disableService}

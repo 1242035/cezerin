@@ -14,11 +14,10 @@ import ProductCategorySelect from './productCategorySelect';
 import ProductCategoryMultiSelect from './productCategoryMultiSelect';
 
 import Paper from '@material-ui/core/Paper';
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
-import IconMenu from '@material-ui/core/IconMenu';
+import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 const Fragment = React.Fragment;
 
@@ -66,14 +65,14 @@ const ProductShort = ({
 );
 
 const RelatedProductActions = ({ fields, index }) => (
-	<IconMenu
+	<Menu
 		targetOrigin={{ horizontal: 'right', vertical: 'top' }}
 		anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
 		iconButtonElement={
 			<IconButton touch={true}>
-				<FontIcon color="#777" className="material-icons">
+				<Icon color="#777" className="material-icons">
 					more_vert
-				</FontIcon>
+				</Icon>
 			</IconButton>
 		}
 	>
@@ -93,7 +92,7 @@ const RelatedProductActions = ({ fields, index }) => (
 				onClick={() => fields.move(index, index + 1)}
 			/>
 		)}
-	</IconMenu>
+	</Menu>
 );
 
 const RelatedProduct = ({ settings, product, actions }) => {
@@ -221,7 +220,8 @@ class ProductsArray extends React.Component {
 				</Paper>
 
 				<div>
-					<Button variant="contained"
+					<Button
+						variant="contained"
 						label={messages.addOrderItem}
 						onClick={this.showAddItem}
 					/>
@@ -326,13 +326,14 @@ const ProductAdditionalForm = ({
 						(pristine ? 'buttons-box-pristine' : 'buttons-box-show')
 					}
 				>
-					<FlatButton
+					<Button
 						label={messages.cancel}
 						className={style.button}
 						onClick={reset}
 						disabled={pristine || submitting}
 					/>
-					<Button variant="contained"
+					<Button
+						variant="contained"
 						type="submit"
 						label={messages.save}
 						primary={true}

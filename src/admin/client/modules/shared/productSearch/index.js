@@ -5,18 +5,13 @@ import api from 'lib/api';
 import * as helper from 'lib/helper';
 
 import Dialog from '@material-ui/core/Dialog';
-import FlatButton from '@material-ui/core/FlatButton';
+import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import {
-	Table,
-	TableBody,
-	TableFooter,
-	TableHeader,
-	TableHeaderColumn,
-	TableRow,
-	TableRowColumn
-} from '@material-ui/core/Table';
 
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
 const SearchBox = ({ text, onChange }) => {
 	return (
 		<TextField
@@ -35,12 +30,10 @@ const SearchResult = ({ products, selectedId, settings, onSelect }) => {
 
 		return (
 			<TableRow key={index} selected={isSelected}>
-				<TableRowColumn>{product.name}</TableRowColumn>
-				<TableRowColumn>{product.category_name}</TableRowColumn>
-				<TableRowColumn>{product.sku}</TableRowColumn>
-				<TableRowColumn style={{ textAlign: 'right' }}>
-					{priceFormatted}
-				</TableRowColumn>
+				<TableCell>{product.name}</TableCell>
+				<TableCell>{product.category_name}</TableCell>
+				<TableCell>{product.sku}</TableCell>
+				<TableCell style={{ textAlign: 'right' }}>{priceFormatted}</TableCell>
 			</TableRow>
 		);
 	});
@@ -132,16 +125,12 @@ export default class ConfirmationDialog extends React.Component {
 		} = this.props;
 
 		const actions = [
-			<FlatButton
+			<Button
 				label={cancelLabel}
 				onClick={this.handleCancel}
 				style={{ marginRight: 10 }}
 			/>,
-			<FlatButton
-				label={submitLabel}
-				primary={true}
-				onClick={this.handleSubmit}
-			/>
+			<Button label={submitLabel} primary={true} onClick={this.handleSubmit} />
 		];
 
 		return (

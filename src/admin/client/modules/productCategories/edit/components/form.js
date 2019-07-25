@@ -11,7 +11,6 @@ import settings from 'lib/settings';
 import api from 'lib/api';
 
 import Paper from '@material-ui/core/Paper';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 
 const validate = values => {
@@ -128,13 +127,14 @@ const ProductCategoryEditForm = ({
 							(pristine ? 'buttons-box-pristine' : 'buttons-box-show')
 						}
 					>
-						<FlatButton
+						<Button
 							label={messages.cancel}
 							className={style.button}
 							onClick={reset}
 							disabled={pristine || submitting}
 						/>
-						<Button variant="contained"
+						<Button
+							variant="contained"
 							type="submit"
 							label={messages.save}
 							primary={true}

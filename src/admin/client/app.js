@@ -21,35 +21,27 @@ import Settings from 'routes/settings';
 import Apps from 'routes/apps';
 import Files from 'routes/files';
 
-import {
-	blue700,
-	cyan700,
-	pinkA200,
-	grey100,
-	grey300,
-	grey400,
-	white,
-	darkBlack,
-	fullBlack
-} from '@material-ui/core/styles/colors';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import getMuiTheme from '@material-ui/core/styles/getMuiTheme';
+import blue from '@material-ui/core/colors/blue';
+import cyan from '@material-ui/core/colors/cyan';
+import grey from '@material-ui/core/colors/grey';
+import pink from '@material-ui/core/colors/pink';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-const muiTheme = getMuiTheme({
+const muiTheme = createMuiTheme({
 	fontFamily: 'Roboto, sans-serif',
 	palette: {
-		primary1Color: blue700,
-		primary2Color: cyan700,
-		primary3Color: grey400,
-		accent1Color: pinkA200,
-		accent2Color: grey100,
-		accent3Color: blue700,
-		textColor: darkBlack,
-		alternateTextColor: white,
-		canvasColor: white,
-		borderColor: grey300,
+		primary1Color: blue[700],
+		primary2Color: cyan[700],
+		primary3Color: grey[400],
+		accent1Color: pink['A200'],
+		accent2Color: grey[100],
+		accent3Color: blue[700],
+		textColor: '#000',
+		alternateTextColor: '#fff',
+		canvasColor: '#fff',
+		borderColor: grey[300],
 		pickerHeaderColor: blue700,
-		shadowColor: fullBlack
+		shadowColor: '#000'
 	},
 	appBar: {}
 });

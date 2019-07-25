@@ -9,7 +9,6 @@ import style from './style.css';
 import api from 'lib/api';
 
 import Paper from '@material-ui/core/Paper';
-import FlatButton from '@material-ui/core/FlatButton';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 
@@ -236,13 +235,14 @@ const ProductInventoryForm = ({
 						(pristine ? 'buttons-box-pristine' : 'buttons-box-show')
 					}
 				>
-					<FlatButton
+					<Button
 						label={messages.cancel}
 						className={style.button}
 						onClick={reset}
 						disabled={pristine || submitting}
 					/>
-					<Button variant="contained"
+					<Button
+						variant="contained"
 						type="submit"
 						label={messages.save}
 						primary={true}

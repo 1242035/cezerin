@@ -2,19 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
 
-import FontIcon from '@material-ui/core/FontIcon';
-import IconMenu from '@material-ui/core/IconMenu';
+import Icon from '@material-ui/core/Icon';
+import Menu from '@material-ui/core/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 
 const WebStoreMenu = () => {
 	return (
-		<IconMenu
+		<Menu
 			iconButtonElement={
 				<IconButton touch={true}>
-					<FontIcon color="#fff" className="material-icons">
+					<Icon color="#fff" className="material-icons">
 						more_vert
-					</FontIcon>
+					</Icon>
 				</IconButton>
 			}
 			targetOrigin={{ horizontal: 'right', vertical: 'top' }}
@@ -24,7 +24,7 @@ const WebStoreMenu = () => {
 				containerElement={<Link to="/admin/apps/account" />}
 				primaryText={messages.account}
 			/>
-		</IconMenu>
+		</Menu>
 	);
 };
 

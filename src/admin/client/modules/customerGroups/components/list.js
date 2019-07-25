@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import messages from 'lib/text';
-import { List, ListItem } from '@material-ui/core/List';
-import Icon from '@material-ui/core/core/FontIcon';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Icon from '@material-ui/core/Icon';
 
 const styles = {
 	selectedItem: {
@@ -56,7 +57,7 @@ export default class Groups extends React.Component {
 						primaryText={messages.customers_noGroup}
 						style={'root' === selectedId ? styles.selectedItem : null}
 						innerDivStyle={styles.innerItem}
-						leftIcon={<FontIcon className="material-icons">clear</FontIcon>}
+						leftIcon={<Icon className="material-icons">clear</Icon>}
 						onClick={() => {
 							onSelect('root');
 						}}
@@ -84,9 +85,7 @@ export default class Groups extends React.Component {
 							className="treeItem"
 							primaryText={messages.customerGroups_titleEditMany}
 							innerDivStyle={styles.innerItem}
-							leftIcon={
-								<FontIcon className="material-icons">settings</FontIcon>
-							}
+							leftIcon={<Icon className="material-icons">settings</Icon>}
 						/>
 					</Link>
 				)}

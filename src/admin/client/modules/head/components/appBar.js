@@ -24,7 +24,7 @@ import AppsHead from 'modules/apps/head';
 import FileListHead from 'modules/files/list/head';
 import DrawerMenu from './drawer';
 
-import FontIcon from '@material-ui/core/FontIcon';
+import Icon from '@material-ui/core/Icon';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
 
@@ -57,12 +57,12 @@ export default class AppBarTop extends React.Component {
 		let title = messages.dashboard;
 		let leftButton = (
 			<IconButton onClick={this.handleToggle}>
-				<FontIcon className="material-icons">menu</FontIcon>
+				<Icon className="material-icons">menu</Icon>
 			</IconButton>
 		);
 		let rightElements = null;
 		{
-			/* <IconButton><FontIcon color="#fff" className="material-icons">notifications</FontIcon></IconButton> */
+			/* <IconButton><Icon color="#fff" className="material-icons">notifications</Icon></IconButton> */
 		}
 
 		if (pathname === '/admin/products') {
@@ -72,13 +72,9 @@ export default class AppBarTop extends React.Component {
 				title = (
 					<span>
 						{messages.products_title}
-						<FontIcon
-							style={{ top: 6 }}
-							color="#fff"
-							className="material-icons"
-						>
+						<Icon style={{ top: 6 }} color="#fff" className="material-icons">
 							chevron_right
-						</FontIcon>
+						</Icon>
 						{productCategoryName}
 					</span>
 				);
@@ -97,13 +93,9 @@ export default class AppBarTop extends React.Component {
 				title = (
 					<span>
 						{messages.orders_title}
-						<FontIcon
-							style={{ top: 6 }}
-							color="#fff"
-							className="material-icons"
-						>
+						<Icon style={{ top: 6 }} color="#fff" className="material-icons">
 							chevron_right
-						</FontIcon>
+						</Icon>
 						{orderStatusName}
 					</span>
 				);
@@ -121,9 +113,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/orders">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -135,9 +127,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/orders">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -147,9 +139,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/customers">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -163,9 +155,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to={`/admin/product/${productId}`}>
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -174,9 +166,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/products">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -188,9 +180,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/products">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -202,13 +194,9 @@ export default class AppBarTop extends React.Component {
 				title = (
 					<span>
 						{messages.customers_title}
-						<FontIcon
-							style={{ top: 6 }}
-							color="#fff"
-							className="material-icons"
-						>
+						<Icon style={{ top: 6 }} color="#fff" className="material-icons">
 							chevron_right
-						</FontIcon>
+						</Icon>
 						{customerGroupName}
 					</span>
 				);
@@ -226,9 +214,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/customers">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -240,9 +228,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/email">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -253,9 +241,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/email">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -266,9 +254,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/email">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -279,9 +267,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/email">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -294,9 +282,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/checkout">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -305,9 +293,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/checkout">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -316,9 +304,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/checkout">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -327,9 +315,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/checkout">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -338,9 +326,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/checkout">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -355,9 +343,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/shipping">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -366,9 +354,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/payments">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -377,9 +365,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/shipping">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -389,9 +377,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/payments">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -406,9 +394,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -420,9 +408,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/pages">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -431,9 +419,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/pages">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -449,9 +437,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/tokens">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -460,9 +448,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/tokens">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -474,9 +462,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/webhooks">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -485,9 +473,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/settings/webhooks">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -501,9 +489,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/apps">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -512,9 +500,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/apps">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);
@@ -526,9 +514,9 @@ export default class AppBarTop extends React.Component {
 			leftButton = (
 				<Link to="/admin/apps">
 					<IconButton>
-						<FontIcon color="#fff" className="material-icons">
+						<Icon color="#fff" className="material-icons">
 							arrow_back
-						</FontIcon>
+						</Icon>
 					</IconButton>
 				</Link>
 			);

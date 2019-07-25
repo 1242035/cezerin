@@ -8,18 +8,18 @@ import style from './style.css';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import FlatButton from '@material-ui/core/FlatButton';
-import FontIcon from '@material-ui/core/FontIcon';
-import IconMenu from '@material-ui/core/IconMenu';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
+import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import SelectField from '@material-ui/core/SelectField';
+import Select from '@material-ui/core/Select';
 import Dialog from '@material-ui/core/Dialog';
 
 const iconButtonElement = (
 	<IconButton touch={true}>
-		<FontIcon color="rgb(189, 189, 189)" className="material-icons">
+		<Icon color="rgb(189, 189, 189)" className="material-icons">
 			more_vert
-		</FontIcon>
+		</Icon>
 	</IconButton>
 );
 
@@ -32,7 +32,7 @@ const ProductOption = ({ option, onChange, selectedOptions }) => {
 		));
 
 	return (
-		<SelectField
+		<Select
 			floatingLabelText={option.name}
 			fullWidth={true}
 			value={selectedValue}
@@ -41,7 +41,7 @@ const ProductOption = ({ option, onChange, selectedOptions }) => {
 			}}
 		>
 			{values}
-		</SelectField>
+		</Select>
 	);
 };
 
@@ -175,12 +175,12 @@ export class OrderItem extends React.Component {
 		const { item, settings, allowEdit } = this.props;
 
 		const editFormActions = [
-			<FlatButton
+			<Button
 				label={messages.cancel}
 				onClick={this.hideEditForm}
 				style={{ marginRight: 10 }}
 			/>,
-			<FlatButton
+			<Button
 				label={messages.save}
 				primary={true}
 				onClick={this.submitEditForm}
@@ -228,10 +228,9 @@ export class OrderItem extends React.Component {
 			<div>
 				<div className={style.item + ' row row--no-gutter middle-xs'}>
 					<div className="col-xs-2">
-						{thumbnailUrl &&
-							thumbnailUrl !== '' && (
-								<img src={thumbnailUrl} className={style.itemImage} />
-							)}
+						{thumbnailUrl && thumbnailUrl !== '' && (
+							<img src={thumbnailUrl} className={style.itemImage} />
+						)}
 					</div>
 					<div className={style.itemName + ' col-xs-4'}>
 						<Link to={`/admin/product/${item.product_id}`}>{item.name}</Link>
@@ -254,7 +253,7 @@ export class OrderItem extends React.Component {
 					</div>
 					<div className="col-xs-1" style={{ textAlign: 'center' }}>
 						{allowEdit && (
-							<IconMenu
+							<Menu
 								iconButtonElement={iconButtonElement}
 								targetOrigin={{ horizontal: 'right', vertical: 'top' }}
 								anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
@@ -263,7 +262,7 @@ export class OrderItem extends React.Component {
 								<MenuItem onClick={this.deleteItem}>
 									{messages.actions_delete}
 								</MenuItem>
-							</IconMenu>
+							</Menu>
 						)}
 					</div>
 				</div>
@@ -282,14 +281,14 @@ export class OrderItem extends React.Component {
 							onChange={this.onOptionChange}
 							selectedOptions={selectedOptions}
 						/>
-						<SelectField
+						<Select
 							floatingLabelText={messages.quantity}
 							fullWidth={true}
 							value={quantity}
 							onChange={this.quantityChange}
 						>
 							{quantityItems}
-						</SelectField>
+						</Select>
 					</div>
 				</Dialog>
 			</div>
